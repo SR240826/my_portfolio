@@ -383,15 +383,16 @@ function gameover(fillamount) {
         
     }
 }
-
+let width = innerWidth;
 addEventListener("resize", (e) => {
     // alert("Game and score is going to reset!")
+    
     if (innerWidth < 700) {
         cancelAnimationFrame(animationFrameId);
         alert("Window size has been changed. This page will reload. If you are on mobile device, please rotate the phone.");
         return;
     }
-    else {
+    else if (innerWidth<width){
         alert("Window size has been changed. This page will reload.")
         location.reload();
     }
