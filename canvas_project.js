@@ -254,8 +254,9 @@ function firstload() {
     controlkey.collision.coll_object = obstacles; 
 }
 
-
+let width = innerWidth;
 addEventListener("load", ()=>{
+    console.log(width)
     if(innerWidth<700) {
         alert("If you are on mobile device, please rotate the phone.");
         return;
@@ -383,16 +384,16 @@ function gameover(fillamount) {
         
     }
 }
-let width = innerWidth;
+
 addEventListener("resize", (e) => {
     // alert("Game and score is going to reset!")
-    
+    console.log(width);
     if (innerWidth < 700) {
         cancelAnimationFrame(animationFrameId);
         alert("Window size has been changed. This page will reload. If you are on mobile device, please rotate the phone.");
         return;
     }
-    else if (innerWidth<width){
+    else if (innerWidth != width && innerWidth > 700){
         alert("Window size has been changed. This page will reload.")
         location.reload();
     }
