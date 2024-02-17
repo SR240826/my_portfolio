@@ -255,7 +255,13 @@ function firstload() {
 }
 
 
-addEventListener("load", firstload) 
+addEventListener("load", ()=>{
+    if(innerWidth<700) {
+        alert("If you are on mobile device, please rotate the phone.");
+        return;
+    }
+    else firstload();
+}) 
 
 addEventListener("keydown", () => {
     controlkey.control(event);
@@ -378,17 +384,18 @@ function gameover(fillamount) {
     }
 }
 
-// addEventListener("resize", (e) => {
-//     // alert("Game and score is going to reset!")
-//     if (innerWidth < 1000) {
-//         cancelAnimationFrame(animationFrameId);
-//         alert("The window size hase been changed! Refresh this page please.")
-//     }
-//     else {
-//         cancelAnimationFrame(animationFrameId);
-//         location.reload();
-//     }
-// })
+addEventListener("resize", (e) => {
+    // alert("Game and score is going to reset!")
+    if (innerWidth < 700) {
+        cancelAnimationFrame(animationFrameId);
+        alert("Window size has been changed. This page will reload. If you are on mobile device, please rotate the phone.");
+        return;
+    }
+    else {
+        alert("Window size has been changed. This page will reload.")
+        location.reload();
+    }
+})
 
 
 
