@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    background-color: rgba(34, 77, 80, 1) !important;
+    padding-top: 0%;
+    font-family: 'Montserrat Alternates', sans-serif !important;
+}
+.flex-container {
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 0 30px;
+    color: #daddba;
+    
+}
+.flex-container .navbar-brand {
+    display: flex;
+    font-family: "Monofett", monospace;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(255, 165, 0, 1) !important;
+    font-size: 50px;
+    max-width: 20vw;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+canvas {
+    border: 1px solid black;
+    position: relative;
+    justify-content: center;
+    left: 15vw;
+    
+}
+img {
+    display: none;
+}
+
+#game {
+    display: block;
+    width: 60vw;
+    justify-content: center;
+}
+
+#time, #username {
+    position: absolute;
+    color: bisque;
+}
+#button {
+    display: block;
+    position: absolute;
+}
+
+#scoreplate {
+    position: absolute;
+    color: bisque;
+}
+.credits {
+    position: relative;
+    font-size: small;
+    color: bisque;
+}
+.credits > p {
+    text-align-last: right;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    padding-right: 15vw;
+}
+.credits > p {
+    font-weight: bold;
+}
+
+.credits > p > a {
+    font-weight: normal;
+    color: rgb(85, 216, 248)
+}
+
+.tutorial {
+    position: absolute !important;
+    font-size: small;
+}
+
+.tutorial, #tutorial {
+    font-weight: bold;
+}
+
+.tutorial-text {
+    font-weight: normal;
+}
+
+.navbar {
+    position: fixed !important;
+    z-index: 1000;
+}
+
+.welcome {
+    height: 10vh;
+    width: 60vw;
+    position: relative;
+    top: 10vh;
+    font-size: 32px;
+    text-align: center;
+    color: #daddba;;
+    letter-spacing: 0.2vh;
+    word-spacing: 0.3vh;
+    font-weight:normal;
+}
+a {
+    text-decoration: none !important;
+}
+
+#author {
+    color: rgb(254, 255, 254);
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#fp {
+    color: rgb(193, 223, 163);
+}
+#harvard{
+    color:#A41034;
+    font-weight: 900;
+    font-family: 'Crimson Text', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#prof{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 1px 1.5px 4px rgba(0, 0, 0, 0.5);
+}
+
+.para {
+    font-size: 18px;
+    font-weight: bolder;
+    color: rgb(193, 223, 163);
+    
+}
+.aboutproject > p, .list > li {
+    font-size: 16px;
+    position: relative;
+    text-align: justify;
+    word-spacing:100%;
+    letter-spacing: 10%;
+    line-height: 150%;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.list > li {
+    text-align: start;
+}
+
+.btn-warning:hover {
+    background-color: rgb(99, 211, 231) !important;
+}
+
+@media only screen and (max-height: 1000px) {
+    .flex-container {
+        max-width: 80vw;        
+    }
+    .flex-container .navbar-brand {
+        font-size: 18px;      
+    }
+}

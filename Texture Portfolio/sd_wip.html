@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Crimson+Text:wght@700&family=Monofett&family=Montserrat+Alternates&family=VT323&display=swap" rel="stylesheet">
+  </head>
+<body>
+  <nav class="navbar">
+    <div class="container-fluid flex-container">
+        <a class="navbar-brand" href="/my_portfolio/index.html" id="logo">
+          Home
+        </a>
+    </div>
+  </nav>
+  <header>
+      <div class="container">
+          <h1>
+              WIP Projects
+          </h1>        
+          <h2>
+              Books
+          </h2>
+      </div>
+  </header>
+      
+  <div class="container">
+      <p>
+          What do you see inside a magic researcher’s lab or library from a fantasy world? In my imagination it was a cluster of books and 
+          pages scattered across the floor. I started this project to create a bunch of old books. And it was a great learning process.
+      </p>
+      <div class="container">
+          <figure>
+              <img src="Books/books render 2.png" class="sd_img" width="20%" alt="The ocean of knowledge!!!">
+              <img src="Books/books render 3.png" class="sd_img" width="20%" alt="The ocean of knowledge!!!">
+              <img src="Books/books render.png" class="sd_img" width="20%" alt="The ocean of knowledge!!!">  
+          </figure>
+          <figcaption id="caption01">Fig.01: The ocean of knowledge!!!</figcaption>
+      </div>
+      <p>
+          This texture was really interesting to work on. Making the spine of books (binding part of the back cover) was something new 
+          to me to produce only from nodes and not from any 3D depth backed object. The usage of grayscale to produce height maps is well known. 
+          But working with it and bringing out what we imagine was really something. To make the particular shape of book-spine, 
+          I used the shape node and then added a linier gradient node which can be rotated between 0 and 90 degree resulting the gradient 
+          along either at y axis or x axis respectively. Then I adjusted the grayscale value with a curve node. In my local library I had noticed some 
+          old books had few bumpy cross section on spine either due to design or to separate the name and author. With the last used gradient 
+          node and a transformation node I connected it to a tile sampler node so that I can control the number of this shape. 
+          The gradient node helps to maintain the slope around the edges and I didn’t need to get another headache on adjusting it. 
+          Rest of the node for the spine were either transform to control thickness and blend to join other parts.
+      </p>
+      <figure>
+          <img src="Books/Book_spine.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="The book spine creation">
+          <figcaption>Fig.02: The book spine creation</figcaption>
+          <br><br>
+          <img src="Books/Spine_crease.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="The creases beside the spine">
+          <figcaption>Fig.03: The creases beside the spine</figcaption>
+      </figure>
+      <p>
+          If you open a book, you will notice that it creates creases on the side of its spine. So I had to add them as well. 
+          It was done with perlin noise, one of the noise that is really useful and produce interesting shape in substance designer. 
+          I wrapped it with both the spine and rectangular shape of cover to blend it smoothly.
+      </p>
+      <p>
+          Next I used Shape Splatter to scattered those books. I used this node instead of tile generator because it has height scale 
+          inside that can be changed randomly.  Tile generator can do this as well, but probably needs more than one nodes to work with that. 
+          I want to add more elements to it in future. Kind of got stuck when I wanted to add multiple text titles procedurally added to books 
+          which are scattered.
+      </p>
+      <figure>
+          <img src="Books/Book_tiles.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Tiles of books and pages">
+          <figcaption>Fig.04: Tiles of books and pages</figcaption>
+          <!-- <br><br>
+          <img src="Books/books render 4.png" class="sd_img" width="20%" alt="Fig.05: Floor of books" id="last_render">
+          <figcaption>Fig.05: Floor of books</figcaption> -->
+      </figure>
+      <p>
+          This project introduced me to some interesting shapes. These shapes will surely help me in future. Apparently I might produce a bookshelf or a whole library with these shapes later!
+      </p>
+  </div>
+  <br><br><br>
+  <header>
+      <div class="container">
+          <h2>
+              Sci Fi/Hard Surface Texture
+          </h2>
+      </div>
+  </header>
+  
+  <div class="container">
+      <p>
+          This is one of the efforts to make different shapes within substance designer. I did not have anything particular in my mind when created this Sci fi surface texture. 
+          However, I wanted to produce a normal trimsheet like texture. Most of the works consist of creating different shape and blending them together in final result. 
+          <br><br>
+          The shapes in this texture were created manually with transform, subtract and changing grayscale of initial shapes. There is also mirror nodes you might 
+          notice in there that works really well for sci fi texture. But for overly repeated elements, mirror node makes it tough to control the overall texture 
+          in final result. Same can be said for transformation nodes because of the changes in axis (x, y) with those nodes. Check the images from the slide 
+          bellow to see final result as well as the substance designer nodes.
+
+      </p>
+      <div id="scifisurface" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#scifisurface" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#scifisurface" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#scifisurface" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#scifisurface" data-bs-slide-to="3" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#scifisurface" data-bs-slide-to="4" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#scifisurface" data-bs-slide-to="5" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#scifisurface" data-bs-slide-to="6" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#scifisurface" data-bs-slide-to="7" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Sci fi/Sci fi.png" class="d-block w-100 sd_img figure-img img-fluid rounded" alt="Final texture on Cube">
+              <div class="carousel-caption d-none d-md-block">  
+                <p>Final texture on Cube</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Sci fi/Sci fi 2.png" class="d-block w-100 sd_img figure-img img-fluid rounded" alt="Final texture on Cylinder">
+              <div class="carousel-caption d-none d-md-block">  
+                <p>Final texture on Cylinder</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Sci fi/Sci fi 3.png" class="d-block w-100 sd_img figure-img img-fluid rounded" alt="Final texture on Plane">
+              <div class="carousel-caption d-none d-md-block">  
+                <p>Final texture on Plane</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Sci fi/Shape 01.png" class="d-block w-100 sd_img figure-img img-fluid rounded" alt="Shape creation circle">
+              <div class="carousel-caption d-none d-md-block">  
+                <p>Shape creation circle</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Sci fi/Shape 02.png" class="d-block w-100 sd_img figure-img img-fluid rounded" alt="Shape creation hinge">
+              <div class="carousel-caption d-none d-md-block">  
+                <p>Shape creation hinge</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Sci fi/Shape 03.png" class="d-block w-100 sd_img figure-img img-fluid rounded" alt="Shape creation of mirror frame">
+              <div class="carousel-caption d-none d-md-block">  
+                <p>Shape creation of mirror frame</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Sci fi/Final blend.png" class="d-block w-100 sd_img figure-img img-fluid rounded" alt="Blending all shape">
+              <div class="carousel-caption d-none d-md-block">  
+                <p>Blending all shape</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="Sci fi/Full nodes.png" class="d-block w-100 sd_img figure-img img-fluid rounded" alt="Blending all shape">
+              <div class="carousel-caption d-none d-md-block">  
+                <p>The whole node network</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#scifisurface" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#scifisurface" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <br><br>
+  </div>
+
+  <div id="modalimg" class="modalimg">
+      <span class="close">&times;</span>
+      <figure class="modalimg-content">
+          <img class="modalimg-content" id="modalimg_img">
+          <figcaption id="caption"></figcaption>
+      </figure>
+  </div>
+</body>
+</html>

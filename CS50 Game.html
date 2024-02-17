@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Canvas</title>
+    <link rel="stylesheet" href="canvas_project.css" type="text/css">
+    <link rel="shortcut icon" href="#">
+    <script src="canvas_project.js" defer type="module"></script>
+    <script src="createPlayer.js" defer type="module"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Crimson+Text:wght@700&family=Monofett&family=Montserrat+Alternates&family=VT323&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid flex-container">
+            <a class="navbar-brand" href="index.html" id="logo">
+                Home
+            </a>
+        </div>
+    </nav>
+    <main>
+        <div class="welcome mx-auto">
+            <p>
+                This was my <a href="canvas_project.html" target="_blank"><span id="fp">Final Project </span></a> for <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science" target="_blank"><span id="fp">CS50 course</span></a> 
+                provided by <span id="harvard">Harvard University</span>’s <a href="https://cs.harvard.edu/malan/" target="_blank"><span id="prof">Prof. David J. Malan</span></a> and his awesome team!
+            </p>
+            <a href="canvas_project.html"><img src="Card Iamge/JS_Game.PNG" id="game" alt="JavaScript Game"></a>
+            <p>Click below to view the project</p>
+            <a href="canvas_project.html"><button type="button" class="btn btn-warning">Go to project page</button></a>
+            <br><br>
+            <div class="aboutproject">
+                <p>
+                    <span class="para">About the project:</span>
+                    The project is a generic game model where player collect objects from environment and 
+                    return to a destination to complete the quest. This is not a full fledged game, 
+                    rather a demonstration of the my understanding of using algorithom and implementation of code.
+                    Click here to view the project.
+                </p>
+                <p>
+                    <span class="para">Project details:</span>
+                    In this quest model, user will control
+                    a character to collect waterdrops and return to an empty reserver to refill it within time limit. The 
+                    elements of the game will keep changing for each reloads. Resizing the window will also result a reload of the game. This project's main 
+                    focus was the implementation of procedural and object oriented code that can be used in any other project in future or stored in a library.
+                    This way of coding provides an advantage of getting a boarder range of results. For example, in this project, everytime
+                    a new game starts, the position of elements will be changed. It is also possible to use more than one map or quest for games this way where
+                    the developers are not required to start from scrach saving a vast amount of time and resources. 
+                </p>
+                <p>
+                    <span class="para">Project usage:</span>
+                    Click "A", "D", "W", "S" to move the character left, right, up and down respectively. Collect all the water and bring them to the reserver untill its filled or before the time ends!
+                </p>
+                <p>
+                    <span class="para">Known Issues:</span>
+                    <ul class="list">
+                        <li>
+                            The obstacles (trees/stones) bounding box has an area of rectangular shape that exceeds its thinner parts. Thus
+                            those part collide with player before reaching those obstacles.
+                        </li>
+                        <li>
+                            The waterdrops sometime spawn upon unreachable obstacles. In that case the page needs to be refreshed.
+                        </li><li>
+                            If the character collide from top or down of obstacle, the movement along x axis might get slowed or stuck. Try moving oposite of collision.
+                        </li>
+                        
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Canvas</title>
+    <link rel="stylesheet" href="canvas_project.css" type="text/css">
+    <link rel="shortcut icon" href="#">
+    <script src="canvas_project.js" defer type="module"></script>
+    <script src="createPlayer.js" defer type="module"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Crimson+Text:wght@700&family=Monofett&family=Montserrat+Alternates&family=VT323&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid flex-container">
+            <a class="navbar-brand" href="index.html" id="logo">
+                Home
+            </a>
+        </div>
+    </nav>
+    <main>
+        <div id="game">
+            <canvas id="canvas"></canvas>
+            <img src="bg/background.jpg" alt="ground images" srcset="bg/background.jpg" id="ground">
+            <img src="Decorations/Decorations.png" alt="trees" srcset="Decorations/Decorations.png" id="trees">
+            <img src="Tiles/Tileset1xPadding.png" alt="trees" srcset="Tiles" id="water"> 
+            <p id="scoreplate">Score: </p>
+            <p id="time">Time: </p>
+            <button id="button" type="button" class="btn btn-danger">Play</button>
+            <p id="username"> Username: (Experimental for flask app)</p> 
+        </div>
+        <!-- Bootstrap -->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary tutorial" data-bs-toggle="modal" data-bs-target="#tutorial" id="tutorial_button">
+            Instruction
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="tutorial" tabindex="-1" aria-labelledby="tutorial" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="tutorial">Tutorial</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="tutorial-text">
+                            Click "A", "D", "W", "S" to move the character left, right, up and down respectively.
+                            <br> 
+                            Collect all the water and bring to reserver to fill before time ends!
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap End-->
+    </main>
+    <section>
+        <div>
+            <p>
+                About the project
+            </p>
+        </div>
+    </section>
+    <div class="credits" id="credits">
+        <p>Credits</p>
+        <p> Code(github): 
+            <a href="https://github.com/SR240826/CS50_Final/tree/master">MD. Sanjidur Rahman(self)</a>
+        </p>
+        <p>Background:
+            <a href="https://www.vecteezy.com/vector-art/14572097-background-of-green-grass-field-cartoon-drawing" target="_blank">Fundo Vetores por Vecteezy</a>
+        </p>
+        <p>Environment elements: 
+            <a href="https://aamatniekss.itch.io/topdown-fantasy-forest" target="_blank">aamatniekss</a>
+        </p>
+    </div>
+</body>
+</html>
