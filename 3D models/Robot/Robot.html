@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/my_portfolio/Texture Portfolio/script.js" defer></script>
+    <link href="/my_portfolio/Texture Portfolio/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Crimson+Text:wght@700&family=Monofett&family=Montserrat+Alternates&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid flex-container">
+            <a class="navbar-brand" href="/my_portfolio/index.html" id="logo">
+                Home
+            </a>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <h1>
+                Artronic
+            </h1>        
+        </div>
+    </header>
+    
+        
+    <div class="container">
+        <p>
+            With the introduction of AI like midjourney, stable diffusion, dall-e, the creative community is alarmed. Some of it is due to 
+            the violation of IP rights and some are scared for job scarcity. But I am not here to discuss all that. Rather I am here for the
+             satisfaction of making something myself. 
+            <br><br>
+             This was one of my work from last year. I wanted to make something on the above topic. It was done with limited time. A lot of 
+             time was spent on gathering reference. Most of my 3D works are related to real life object. So it was new to me to do everything from 
+             scratch. For the limited time, I wanted to limit the scope of works as well. I was not good with sculpt that time. But still pushed 
+             myself to learn some brushes and use it.
+ 
+        </p>
+        <div class="container">
+            <figure>
+                <img src="Robot side.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot side view">
+                <img src="Robot font.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot front view">
+                <img src="Robot back.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot back view">  
+            </figure>
+            <figcaption id="caption01">Fig.01: My chibi robot</figcaption>
+        </div>
+        <p>
+            My work pipeline for this project was creating base model in blender which includes sculpting and retopology as well. Then the model’s normal, 
+            AO, displacement was baked inside substance painter. The full texture was done inside painter as well. I love how it makes texturing easier which 
+            includes masking most of the time. 
+        </p>
+        <div class="container">
+            <figure>
+                <img src="robot wireframe toggle clay.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot side view">
+                <img src="robot wireframe toggle.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot front view">
+                <img src="robot wireframe toggle on.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot back view">  
+            </figure>
+            <figcaption id="caption01">Fig.02: My chibi robot</figcaption>
+        </div>
+        <p>
+            In this project I used UDIM and RGB-grayscale-packed texture as well. A lot of artist or clients tends to ignore or been unfamiliar with these methods. Some even make 
+            it sound way much complicated. But it is really easy to use and with the modern graphics advancements, the advantage should be leveraged.  
+        </p>
+        <figure>
+            <img src="UDIM.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="UV layout for UDIM">
+            <figcaption>Fig.03: UV layout for UDIM</figcaption>
+            <img src="Texture node.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Packed texture separation">
+            <figcaption>Fig.04: Packed texture separation</figcaption>
+        </figure>
+    </div>
+    <div id="modalimg" class="modalimg">
+        <span class="close">&times;</span>
+        <figure class="modalimg-content">
+            <img class="modalimg-content" id="modalimg_img">
+            <figcaption id="caption"></figcaption>
+        </figure>
+    </div>
+</body>
+</html>

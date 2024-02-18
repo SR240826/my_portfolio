@@ -44,24 +44,17 @@ main .flex-container .myworks{
     align-items: center;
     margin: 10px;
     gap: 20px;
-    font-size: 24px;
+    font-size: 32px;
+    font-weight: bold;
+    color: bisque;
     height: 80px;
-    /* 
-    width: 60vw;
-    max-width: 80vw;
-    text-align: end; */
-    background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(34, 77, 80, 1));
-    border-top-right-radius:  30px 30px;
-    border-bottom-right-radius: 30px 30px;
+    background: rgb(18, 155, 87);
+    border-radius: 15px;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    z-index: 0;
+    font-family: 'Poppins', sans-serif;
 }
-
-main .flex-container .projects div:nth-child(2){
-    display: none;
-}
-main .flex-container .projects div:nth-child(3){
-    display: none;
+.myworks > div {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 main .flex-container .shape .section {
@@ -76,11 +69,69 @@ main .flex-container .shape .section {
 }
 
 main .shape .project h2 {
-    text-align: center;
-    background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(34, 77, 80, 1), rgba(34, 77, 80, 0));
-    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(39, 158, 102, 0.8), rgba(34, 77, 80, 0));
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    height: 250px;
     z-index: 2;
+    
+}
+.project > h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+}
+
+main .shape .project:nth-child(1) h2 {
+    background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(130, 43, 180, 0.8), rgba(34, 77, 80, 0));
+}
+main .shape .project:nth-child(3) h2 {
+    background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(240, 92, 195, 0.8), rgba(34, 77, 80, 0));
+}
+main .shape .project:nth-child(5) h2 {
+    background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(204, 185, 80, 0.76), rgba(34, 77, 80, 0));
+}
+#texturebg {
+    background-color: burlywood;
+}
+#artbg {
+    background-color: burlywood;
+}
+
+#parentheses {
+    color: rgb(255, 255, 132);
+    font-weight: bolder;
+}
+#curly {
+    color: rgb(59, 199, 255);
+    font-weight: bolder;
+}
+#operator1, #operator2 {
+    color: rgb(209, 59, 255);
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#operator2 {
+    display: none;
+}
+.bi-palette {
+    color:rgb(245, 138, 67) !important;
+    margin-right: 10px;
+}
+.bi-file-earmark-code{
+    color:rgb(245, 73, 67) !important;
+    margin-right: 10px;
+}
+.bi-badge-3d-fill {
+    color:rgb(218, 202, 58) !important;
+    margin-right: 10px;
+}
+.project:hover {
+    cursor: pointer;
 }
 
 main .shape .section::-webkit-scrollbar {
@@ -99,7 +150,8 @@ main .shape .section .card {
     width: 70%;
     height: auto;
     max-width: 60vw;
-    max-height: 500px;    font-family: 'Montserrat Alternates', sans-serif;
+    max-height: 500px;    
+    font-family: 'Montserrat Alternates', sans-serif;
     letter-spacing: 1.5px;
     font-size: 16px;
     text-align: center;
@@ -173,21 +225,20 @@ iframe {
 .flex-container .welcome {
     align-self: center;
     padding-top: 100px;
-    padding-bottom: 400px;
+    padding-bottom: 150px;
     text-align: right;
-    color: rgba(255, 165, 0, 1);
+    color: #daddba;;
     letter-spacing: 100%;
     font-weight:normal;
     font-family: 'Montserrat Alternates', sans-serif;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    flex-wrap: wrap;
 }
 #author {
     color: rgb(254, 255, 254);
     font-weight: bolder;
 }
 #skills {
-    color: rgb(193, 223, 163);
+    color: rgb(136, 226, 75);
 }
 
 @media only screen and (max-width: 1080px) and (max-height: 2000px) {
@@ -222,6 +273,8 @@ iframe {
 
     main .shape {
         scroll-behavior: smooth;
+        width: 90vw;
+        align-self: center;
     }
 
     main .shape .section .card {
@@ -238,5 +291,26 @@ iframe {
 
     main .shape .section .card a img{
         width: 80%;
+    }
+    .project > h2{
+        flex-direction: column;
+        align-items: center;
+    }
+    #operator1 {
+        display: none;
+    }
+    #operator2 {
+        display: flex;
+        font-weight: normal;
+    }
+    .bi-palette {
+        margin-right: 5px;
+    }
+    .bi-file-earmark-code{
+        margin-right: 5px;
+    }
+    .bi-badge-3d-fill {
+
+        margin-right: 5px;
     }
 }

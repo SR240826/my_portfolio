@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/my_portfolio/Texture Portfolio/script.js" defer></script>
+    <link href="/my_portfolio/Texture Portfolio/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Crimson+Text:wght@700&family=Monofett&family=Montserrat+Alternates&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid flex-container">
+            <a class="navbar-brand" href="/my_portfolio/index.html" id="logo">
+                Home
+            </a>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <h1>
+                Product Design Exercise : Steam Deck
+            </h1>        
+        </div>
+    </header>
+    
+        
+    <div class="container">
+        <p>
+            This was one of the first complex 3D models I have made when steam first announced their new product steam deck. It was with limited reference model, 
+            and some dimension or design may mismatch. It was totally made with subsurface subdivision workflow and no Boolean. That means all the curve, insets 
+            and mesh cuts were done manually while maintaining edge flow.  
+        </p>
+        <figure>
+            <img src="Front View.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Steam deck base render">
+            <figcaption>Fig.01: Steam deck base render</figcaption>
+            <img src="Steam Deck render.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Steam deck base render">
+            <figcaption>Fig.02: Steam deck base render</figcaption>
+        </figure>
+        <p>
+            I had also done the UV unwrap for this model, which is easy for most of the electrical device. However, the texture was created procedurally. 
+            The whole workflow was done inside blender3d application. 
+        </p>
+        <div class="container">
+            <figure>
+                <img src="Steam deck clay 2.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Steam deck clay view">
+                <img src="Steam deck wireframe.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Steam deck wireframe view">
+                <img src="Steam deck clay 3.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Steam deck clay view">  
+            </figure>
+            <figcaption id="caption01">Fig.03: Steam deck clay and wireframe view</figcaption>
+        </div>
+        <div class="container">
+            <figure>
+                <img src="front uv.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Steam deck front UV layout">
+                <img src="back uv.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Steam deck back UV layout"> 
+            </figure>
+            <figcaption id="caption01">Fig.04: UV layout</figcaption>
+        </div>
+        <p>
+            The textures were made procedurally with blender’s shader nodes. I have also tried to give it a cyberpunk theme as you can see below. It was a 
+            good excersize for product rendering in terms of product complexity as well as lighting set up.  
+        </p>
+        <figure>
+            <img src="deck CP2.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Steam deck with cyberpunk theme">
+            <figcaption>Fig.05: Steam deck with cyberpunk theme</figcaption>
+            <img src="deck CP2 2.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Steam deck with cyberpunk theme">
+            <figcaption>Fig.06: Steam deck with cyberpunk theme</figcaption>
+        </figure>
+    </div>
+    <div id="modalimg" class="modalimg">
+        <span class="close">&times;</span>
+        <figure class="modalimg-content">
+            <img class="modalimg-content" id="modalimg_img">
+            <figcaption id="caption"></figcaption>
+        </figure>
+    </div>
+</body>
+</html>
