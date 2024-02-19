@@ -37,14 +37,14 @@ projects.forEach(function(project) {
         }
         else project.nextElementSibling.style.display = "none";
     })
-    project.addEventListener("touchsend", ()=> {
-        if (project.nextElementSibling.style.display !== "flex") {
-            project.nextElementSibling.style.display = "flex";
-            let childheight = project.nextElementSibling.children[0].offsetHeight
-            project.nextElementSibling.style.height = childheight + childheight*0.5 + "px"
-        }
-        else project.nextElementSibling.style.display = "none";
-    })
+    // project.addEventListener("touchsend", ()=> {
+    //     if (project.nextElementSibling.style.display !== "flex") {
+    //         project.nextElementSibling.style.display = "flex";
+    //         let childheight = project.nextElementSibling.children[0].offsetHeight
+    //         project.nextElementSibling.style.height = childheight + childheight*0.5 + "px"
+    //     }
+    //     else project.nextElementSibling.style.display = "none";
+    // })
 })
 
 // click and drag when flex row
@@ -80,7 +80,12 @@ cards.forEach(function(card) {
 
 
 contactbutton.addEventListener("click", ()=>{
-    if(contactform.style.display === "flex")
+    if(contactform.style.display === "flex") {
         contactform.style.display = "none"
-    else contactform.style.display = "flex"
+        contactbutton.innerHTML = "Contact me!"
+    }
+    else {
+        contactform.style.display = "flex";
+        contactbutton.innerHTML = "Later?"
+    }
 })

@@ -31,6 +31,25 @@ body {
     z-index: 2;
 }
 
+.flex-container .welcome {
+    align-self: center;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    text-align: right;
+    color: #daddba;;
+    letter-spacing: 100%;
+    font-weight:normal;
+    font-family: 'Montserrat Alternates', sans-serif;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+#author {
+    color: rgb(254, 255, 254);
+    font-weight: bolder;
+}
+#skills {
+    color: rgb(136, 226, 75);
+}
+
 main .flex-container{
     display: flex;
     flex-direction: column;
@@ -130,6 +149,8 @@ main .shape .project:nth-child(5) h2 {
     color:rgb(218, 202, 58) !important;
     margin-right: 10px;
 }
+
+
 .project:hover {
     cursor: pointer;
 }
@@ -175,12 +196,21 @@ main .shape .section .card {
     width: 50%;
     border-radius: 15px;
 }
-iframe {
-    border-radius: 15px;
-    width: 100vw;
-    scrollbar-width: none;
-    max-width: 490px;
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 100vw;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0;
+    top: 15vh;
+    width: 100%;
 }
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -201,14 +231,15 @@ iframe {
     color: rgb(241, 240, 153) !important;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
     text-shadow: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 
 }
 
 .contactbutton:hover {
     filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
-    color: rgb(117, 14, 212) !important;
-    background-color: rgb(89, 159, 224);
+    color: rgb(49, 45, 45) !important;
+    font-weight: bold;
+    background-color: rgb(90, 224, 142);
     transform: scale(1.1);
     cursor: pointer;
 }
@@ -216,30 +247,41 @@ iframe {
 #contactform {
     width: 80vw;
     height: 1100px;
+    border-radius: 15px;
+    scrollbar-width: none;
+    max-width: 490px;
     display: none;
     background-color: #196b91;
     filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));   
 }
 
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 20px
+}
+.fa-github{
+    font-size: 35px;
+    color: #f5f5f5
+}
+.fa-artstation {
+    font-size: 35px;
+    color: rgb(0, 195, 255);
+}
+.fa-linkedin {
+    font-size: 35px;
+    color: rgb(44, 107, 202);
+}
+.copy {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    
+}
+.copy a {
+    text-decoration: none;
+    color: #71c0ee;
+}
 
-.flex-container .welcome {
-    align-self: center;
-    padding-top: 100px;
-    padding-bottom: 150px;
-    text-align: right;
-    color: #daddba;;
-    letter-spacing: 100%;
-    font-weight:normal;
-    font-family: 'Montserrat Alternates', sans-serif;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-}
-#author {
-    color: rgb(254, 255, 254);
-    font-weight: bolder;
-}
-#skills {
-    color: rgb(136, 226, 75);
-}
 
 @media only screen and (max-width: 1080px) and (max-height: 2000px) {
 
@@ -259,6 +301,9 @@ iframe {
 }
 
 @media only screen and (max-height: 1000px) {
+    main .flex-container .myworks{
+        font-size: 24px;
+    }
     .flex-container .navbar-brand {
         font-size: 32px;        
     }
@@ -289,9 +334,12 @@ iframe {
     main .shape .section .card a img{
         width: 80%;
     }
+    
     .project > h2{
         flex-direction: column;
         align-items: center;
+        font-size: 18px;
+        max-height: 180px;
     }
     #operator1 {
         display: none;
