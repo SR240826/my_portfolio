@@ -49,11 +49,16 @@ button {
     width: 25vw;
     margin-left: 5px !important;
 }
-.ctrls{
+.btnctrls{
+    display: none;
+}
+.workflow{
     display: flex;
     flex-direction: column;
-    gap: 10px;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 50px;
 }
 
 @media only screen and (max-height: 1000px) {
@@ -62,5 +67,11 @@ button {
     }
     .flex-container .navbar-brand {
         font-size: 32px;      
+    }
+    .btnctrls{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
     }
 }
