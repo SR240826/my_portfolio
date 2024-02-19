@@ -371,7 +371,7 @@ function timeout() {
 function gameover(fillamount) {
     if (fillamount >= 500) {
         cancelAnimationFrame(animationFrameId);
-        c.font = innerWidth*.1 + "px Comic Sans MS";
+        c.font = "48px Comic Sans MS";
         //c.fillStyle = "Blue";
         c.textAlign = "center";
         c.strokeStyle = "Red";
