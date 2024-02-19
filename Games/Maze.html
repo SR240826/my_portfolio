@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Canvas</title>
+        <link rel="stylesheet" href="maze.css" type="text/css">
+        <link rel="shortcut icon" href="#">
+        <script src="maze.js" defer type="module"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Crimson+Text:wght@700&family=Monofett&family=Montserrat+Alternates&family=VT323&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container-fluid flex-container">
+                <a class="navbar-brand" href="/" id="logo">
+                    Home
+                </a>
+            </div>
+        </nav>
+        <main>
+            <div id="maze">
+                <canvas id="mazeCanvas" width="400" height="400" style="border:10px solid rgb(138, 138, 138)"></canvas>
+                <h2 id="solved">Maze solved! <br>Congratulations!</h2>   
+            </div>
+            <div class="ctrls">
+                <div>
+                    <button class="btn btn-danger" id="btn_top">up</button>
+                </div>
+                <div>
+                    <button class="btn btn-danger" id="btn_left">left</button>
+                    <button class="btn btn-danger" id="btn_down">down</button>
+                    <button class="btn btn-danger" id="btn_right">right</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -259,9 +259,6 @@ iframe {
 }
 
 @media only screen and (max-height: 1000px) {
-    .flex-container {
-        max-width: 80vw;        
-    }
     .flex-container .navbar-brand {
         font-size: 32px;        
     }

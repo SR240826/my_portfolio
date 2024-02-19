@@ -22,6 +22,49 @@ body {
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
+.navbar {
+    position: fixed !important;
+    z-index: 1000;
+}
+
+.welcome {
+    height: 10vh;
+    width: 60vw;
+    position: relative;
+    top: 10vh;
+    font-size: 32px;
+    text-align: center;
+    color: #daddba;;
+    letter-spacing: 0.2vh;
+    word-spacing: 0.3vh;
+    font-weight:normal;
+}
+a {
+    text-decoration: none !important;
+}
+
+#author {
+    color: rgb(254, 255, 254);
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#fp {
+    color: rgb(193, 223, 163);
+}
+#harvard{
+    color:#A41034;
+    font-weight: 900;
+    font-family: 'Crimson Text', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#prof{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 1px 1.5px 4px rgba(0, 0, 0, 0.5);
+}
+
+
 canvas {
     border: 1px solid black;
     position: relative;
@@ -85,47 +128,6 @@ img {
     font-weight: normal;
 }
 
-.navbar {
-    position: fixed !important;
-    z-index: 1000;
-}
-
-.welcome {
-    height: 10vh;
-    width: 60vw;
-    position: relative;
-    top: 10vh;
-    font-size: 32px;
-    text-align: center;
-    color: #daddba;;
-    letter-spacing: 0.2vh;
-    word-spacing: 0.3vh;
-    font-weight:normal;
-}
-a {
-    text-decoration: none !important;
-}
-
-#author {
-    color: rgb(254, 255, 254);
-    font-weight: bolder;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-#fp {
-    color: rgb(193, 223, 163);
-}
-#harvard{
-    color:#A41034;
-    font-weight: 900;
-    font-family: 'Crimson Text', serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-#prof{
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-shadow: 1px 1.5px 4px rgba(0, 0, 0, 0.5);
-}
 
 .para {
     font-size: 18px;
