@@ -33,6 +33,9 @@ p {
     color: #daddba;
     font-size: 18px;
 }
+#tutorial{
+    display: flex;
+}
 #maze {
     display: flex;
     flex-direction: column;
@@ -78,5 +81,8 @@ button {
         flex-direction: column;
         gap: 10px;
         align-items: center;
+    }
+    #tutorial{
+        display: none;
     }
 }
