@@ -9,6 +9,7 @@ body {
     color: #daddba;
     
 }
+
 .flex-container .navbar-brand {
     display: flex;
     font-family: "Monofett", monospace;
@@ -28,9 +29,13 @@ body {
     z-index: 1000;
 }
 
-
+p {
+    color: #daddba;
+    font-size: 18px;
+}
 #maze {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 100px;
