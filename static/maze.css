@@ -67,22 +67,6 @@ button {
     justify-content: center;
     overflow: hidden;
     padding-top: 50px;
+    z-index: 1;
 }
 
-@media only screen and (max-height: 1000px) {
-    .flex-container {
-        max-width: 80vw;        
-    }
-    .flex-container .navbar-brand {
-        font-size: 32px;      
-    }
-    .btnctrls{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-    #tutorial{
-        display: none;
-    }
-}

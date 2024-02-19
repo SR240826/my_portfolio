@@ -281,3 +281,4 @@ function gameover () {
 
 window.addEventListener('keydown', moveplayer);
 setup();
+

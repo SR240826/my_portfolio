@@ -7,10 +7,11 @@
     <meta http-equiv='expires' content='0'> 
     <meta http-equiv='pragma' content='no-cache'>
     <title>HTML Canvas</title>
-    <link rel="stylesheet" href="canvas_project.css" type="text/css">
+    <link rel="stylesheet" href="static/canvas_project.css" type="text/css">
     <link rel="shortcut icon" href="#">
-    <script src="canvas_project.js" defer type="module"></script>
-    <script src="createPlayer.js" defer type="module"></script>
+    <script src="static/canvas_project.js" defer type="module"></script>
+    <script src="static/footer.js" defer type="module"></script>
+    <link rel="stylesheet" href="static/footer.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +34,7 @@
                 This was my <a href="canvas_project.html" target="_blank"><span id="fp">Final Project </span></a> for <a href="https://pll.harvard.edu/course/cs50-introduction-computer-science" target="_blank"><span id="fp">CS50 course</span></a> 
                 provided by <span id="harvard">Harvard University</span>’s <a href="https://cs.harvard.edu/malan/" target="_blank"><span id="prof">Prof. David J. Malan</span></a> and his awesome team!
             </p>
-            <a href="canvas_project.html"><img src="../Card Iamge/JS_Game.PNG" id="game" alt="JavaScript Game"></a>
+            <a href="canvas_project.html"><img src="Card Iamge/JS_Game.PNG" id="game" alt="JavaScript Game"></a>
             <p>Click below to view the project</p>
             <a href="canvas_project.html"><button type="button" class="btn btn-warning">Go to project page</button></a>
             <br><br>
@@ -43,7 +44,6 @@
                     The project is a generic game model where player collect objects from environment and 
                     return to a destination to complete the quest. This is not a full fledged game, 
                     rather a demonstration of the my understanding of using algorithom and implementation of code.
-                    Click here to view the project.
                 </p>
                 <p>
                     <span class="para">Project details:</span>
@@ -77,6 +77,62 @@
             </div>
         </div>
     </main>
-    
+    <footer class="footer flex-container">
+        <div>
+            <p>
+                Check out my other projects!
+            </p>
+        </div>
+        <div class="section footer">
+            <div class="card">
+                <a href="canvas_project.html">
+                    <img src="Card Iamge/JS_Game.PNG" alt="JavaScript Game">
+                    <p> A simple generic quest model in JavaScript</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Maze.html">
+                    <img src="Card Iamge/maze.png" alt="JavaScript Game">
+                    <p> Maze generator</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Texture Portfolio/sd_wood.html">
+                    <img src="Texture Portfolio/Wood tile/Wood render 2.png" alt="Substance designer">
+                    <p> Stylized wood texture, fully procedural, with substance designer</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Texture Portfolio/sd_trim_sheet.html">
+                    <img src="Texture Portfolio/Trim Sheet/Trim sheet SD 2.png" alt="Substance designer">
+                    <p> Stylized trim sheet texture with substance designer</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Texture Portfolio/sd_wip.html">
+                    <img src="Texture Portfolio/Sci fi/Sci fi.png" alt="Substance designer">
+                    <p> Other experimental projects with substance designer</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="3D models/Robot/Robot.html">
+                    <img src="3D models/Robot/Robot 2.png" alt="Substance designer">
+                    <p> Artronic</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="3D models/Steam Deck/steam_deck.html">
+                    <img src="3D models/Steam Deck/Steam deck cover.png" alt="Substance designer">
+                    <p> Steam Deck (product excersize)</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="3D models/miscellaneous/Miscellaneous.html">
+                    <img src="3D models/miscellaneous/misc cover.png" alt="Substance designer">
+                    <p> Other experiments and excersize</p>
+                </a>
+            </div>
+        </div>
+    </footer>    
 </body>
 </html>

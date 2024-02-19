@@ -28,9 +28,8 @@ body {
 }
 
 .welcome {
-    height: 10vh;
+    padding-top: 100px;
     width: 60vw;
-    position: relative;
     top: 10vh;
     font-size: 32px;
     text-align: center;
@@ -72,7 +71,7 @@ canvas {
     left: 15vw;
     
 }
-img {
+#game > img {
     display: none;
 }
 
@@ -152,13 +151,4 @@ img {
 
 .btn-warning:hover {
     background-color: rgb(99, 211, 231) !important;
-}
-
-@media only screen and (max-height: 1000px) {
-    .flex-container {
-        max-width: 80vw;        
-    }
-    .flex-container .navbar-brand {
-        font-size: 18px;      
-    }
 }

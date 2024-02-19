@@ -76,16 +76,6 @@ main .flex-container .myworks{
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-main .flex-container .shape .section {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: auto;
-    overflow-y: auto;
-    white-space: normal;
-    scrollbar-width: none;
-    transition: transform 0.3s ease;      
-}
 
 main .shape .project h2 {
     display: flex;
@@ -155,12 +145,22 @@ main .shape .project:nth-child(5) h2 {
     cursor: pointer;
 }
 
+.section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: normal;
+    scrollbar-width: none;
+    transition: transform 0.3s ease;      
+}
+
 main .shape .section::-webkit-scrollbar {
     display: none;
 }
 
-
-main .shape .section .card {
+.section .card {
     justify-content: center;
     flex: 0 0 auto;
     margin: 20px;
@@ -171,7 +171,8 @@ main .shape .section .card {
     width: 70%;
     height: auto;
     max-width: 60vw;
-    max-height: 500px;    
+    min-height: 300px;
+    max-height: 400px;    
     font-family: 'Montserrat Alternates', sans-serif;
     letter-spacing: 1.5px;
     font-size: 16px;
@@ -319,19 +320,19 @@ main .shape .section .card {
         align-self: center;
     }
 
-    main .shape .section .card {
+    .section .card {
         width: 200px;
         max-height: 200px;
         margin: 10px;
     }
 
-    main .flex-container .shape .section {
+    .section {
         flex-direction: row;
         height: 300px;
         overflow-y: hidden;
     }
 
-    main .shape .section .card a img{
+    .section .card a img{
         width: 80%;
     }
     
