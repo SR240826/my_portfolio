@@ -36,7 +36,9 @@ projects.forEach(function(project) {
             childheight = project.nextElementSibling.children[0].offsetHeight
             project.nextElementSibling.style.height = childheight + childheight*0.5 + "px"
         }
-        // else project.nextElementSibling.style.display = "none";
+        else if (innerWidth > 1000 && project.nextElementSibling.style.display === "flex") {
+            project.nextElementSibling.style.display = "none";
+        }
     
 })
 })

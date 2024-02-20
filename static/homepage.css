@@ -281,6 +281,7 @@ main .shape .section::-webkit-scrollbar {
 .copy {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
+    text-align: center;
     
 }
 .copy a {
