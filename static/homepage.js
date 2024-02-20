@@ -27,21 +27,20 @@ cards.forEach(function(card) {
     })
 });
 
-let childheight;
-// toogle project collaspe
-projects.forEach(function(project) {
-    project.addEventListener("click", ()=> {
-        if (innerWidth > 1000 && project.nextElementSibling.style.display !== "flex") {
-            project.nextElementSibling.style.display = "flex";
-            childheight = project.nextElementSibling.children[0].offsetHeight
-            project.nextElementSibling.style.height = childheight + childheight*0.5 + "px"
-        }
-        else if (innerWidth > 1000 && project.nextElementSibling.style.display === "flex") {
-            project.nextElementSibling.style.display = "none";
-        }
-    
-})
-})
+// let childheight;
+// // toogle project collaspe
+// projects.forEach(function(project) {
+//     project.addEventListener("click", ()=> {
+//         if (innerWidth > 1000 && project.nextElementSibling.style.display !== "flex") {
+//             project.nextElementSibling.style.display = "flex";
+//             childheight = project.nextElementSibling.children[0].offsetHeight
+//             project.nextElementSibling.style.height = childheight + childheight*0.5 + "px"
+//         }
+//         else if (innerWidth > 1000 && project.nextElementSibling.style.display === "flex") {
+//             project.nextElementSibling.style.display = "none";
+//         } 
+//     })
+// })
 
 // click and drag when flex row
 let ismousedown = false;

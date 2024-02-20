@@ -143,28 +143,33 @@ main .shape .project:nth-child(5) h2 {
 
 .project:hover {
     cursor: pointer;
-    background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(104, 238, 216, 0.8), rgba(34, 77, 80, 0));
+    background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(104, 238, 216, 0.342), rgba(34, 77, 80, 0));
 
 }
 
 .section {
-    display: none;
+    display:none;
     flex-direction: column;
     align-items: center;
     overflow-x: auto;
     overflow-y: auto;
     white-space: normal;
     scrollbar-width: none;
-    transition: transform 0.3s ease;      
+    height: 0;
+    max-height: 430px;
+    /* max-height: 200px; */
+    transition: height 5s ease;      
 }
 .project:hover .section {
     display: flex;
+    height: 100%;
+
 }
 
 
-main .shape .section::-webkit-scrollbar {
+/* main .shape .section::-webkit-scrollbar {
     display: none;
-}
+} */
 
 .section .card {
     justify-content: center;
@@ -177,7 +182,8 @@ main .shape .section::-webkit-scrollbar {
     width: 70%;
     height: auto;
     max-width: 60vw;
-    min-height: 300px;   
+    min-height: 300px;
+    max-height: 400px;
     font-family: 'Montserrat Alternates', sans-serif;
     letter-spacing: 1.5px;
     font-size: 16px;
@@ -302,9 +308,9 @@ main .shape .section::-webkit-scrollbar {
         width: 60vw;
         margin: 15px;
     }
-    main .flex-container .shape .section {
+    /* main .flex-container .shape .section {
         height: 50vh;
-    }
+    } */
 }
 
 @media only screen and (max-height: 1000px) {
@@ -335,7 +341,9 @@ main .shape .section::-webkit-scrollbar {
     .section {
         display: flex;
         flex-direction: row;
-        height: 300px;
+        width: 80vw;
+        height: auto;
+        /* max-height: 500px; */
         overflow-y: auto;
         overflow-x: auto;
     }
