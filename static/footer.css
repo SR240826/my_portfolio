@@ -90,4 +90,10 @@
         min-height: 250px;
         margin: 10px;
     }
+    .footer > div > p {
+        font-size: 18px;
+    }
+    .footer > div {
+        max-height: 150px;        
+    }
 }
