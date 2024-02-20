@@ -82,10 +82,8 @@ cards.forEach(function(card) {
 contactbutton.addEventListener("click", ()=>{
     if(contactform.style.display === "flex") {
         contactform.style.display = "none"
-        contactbutton.innerHTML = "Contact me!"
     }
     else {
         contactform.style.display = "flex";
-        contactbutton.innerHTML = "Later?"
     }
 })

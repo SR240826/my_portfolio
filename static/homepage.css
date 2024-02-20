@@ -327,6 +327,7 @@ main .shape .section::-webkit-scrollbar {
     }
 
     .section {
+        display: flex;
         flex-direction: row;
         height: 300px;
         overflow-y: hidden;
