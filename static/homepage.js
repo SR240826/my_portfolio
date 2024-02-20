@@ -27,24 +27,18 @@ cards.forEach(function(card) {
     })
 });
 
+let childheight;
 // toogle project collaspe
 projects.forEach(function(project) {
     project.addEventListener("click", ()=> {
-        if (project.nextElementSibling.style.display !== "flex") {
+        if (innerWidth > 1000 && project.nextElementSibling.style.display !== "flex") {
             project.nextElementSibling.style.display = "flex";
-            let childheight = project.nextElementSibling.children[0].offsetHeight
+            childheight = project.nextElementSibling.children[0].offsetHeight
             project.nextElementSibling.style.height = childheight + childheight*0.5 + "px"
         }
-        else project.nextElementSibling.style.display = "none";
-    })
-    // project.addEventListener("touchsend", ()=> {
-    //     if (project.nextElementSibling.style.display !== "flex") {
-    //         project.nextElementSibling.style.display = "flex";
-    //         let childheight = project.nextElementSibling.children[0].offsetHeight
-    //         project.nextElementSibling.style.height = childheight + childheight*0.5 + "px"
-    //     }
-    //     else project.nextElementSibling.style.display = "none";
-    // })
+        // else project.nextElementSibling.style.display = "none";
+    
+})
 })
 
 // click and drag when flex row

@@ -143,6 +143,8 @@ main .shape .project:nth-child(5) h2 {
 
 .project:hover {
     cursor: pointer;
+    background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(104, 238, 216, 0.8), rgba(34, 77, 80, 0));
+
 }
 
 .section {
@@ -155,6 +157,10 @@ main .shape .project:nth-child(5) h2 {
     scrollbar-width: none;
     transition: transform 0.3s ease;      
 }
+.project:hover .section {
+    display: flex;
+}
+
 
 main .shape .section::-webkit-scrollbar {
     display: none;
@@ -171,8 +177,7 @@ main .shape .section::-webkit-scrollbar {
     width: 70%;
     height: auto;
     max-width: 60vw;
-    min-height: 300px;
-    max-height: 400px;    
+    min-height: 300px;   
     font-family: 'Montserrat Alternates', sans-serif;
     letter-spacing: 1.5px;
     font-size: 16px;
@@ -331,6 +336,7 @@ main .shape .section::-webkit-scrollbar {
         flex-direction: row;
         height: 300px;
         overflow-y: hidden;
+        overflow-x: hidden;
     }
 
     .section .card a img{
