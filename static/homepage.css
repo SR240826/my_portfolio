@@ -364,6 +364,11 @@ main .shape .section::-webkit-scrollbar {
         font-size: 16px;
         max-height: 100px;
     }
+    #contactform {
+        width: 95vw;
+        max-width: 95vw;
+    }
+
     #operator1 {
         display: none;
     }
