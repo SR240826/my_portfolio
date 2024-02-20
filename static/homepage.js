@@ -75,10 +75,12 @@ cards.forEach(function(card) {
 
 
 contactbutton.addEventListener("click", ()=>{
-    if(contactform.style.display === "flex") {
-        contactform.style.display = "none"
+    if(contactform.style.maxHeight !== "1100px") {
+        contactform.style.maxHeight = "1100px"
+        setTimeout(()=>{
+            scrollTo({top: (document.documentElement.scrollHeight - contactform.scrollHeight), behavior:'smooth'}); }, 1000)
     }
     else {
-        contactform.style.display = "flex";
+        contactform.style.maxHeight = "0px";
     }
 })

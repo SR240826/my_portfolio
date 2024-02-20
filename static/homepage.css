@@ -148,30 +148,33 @@ main .shape .project:nth-child(5) h2 {
 }
 
 .section {
-    display:none;
+    display:flex;
     flex-direction: column;
     align-items: center;
     overflow-x: auto;
     overflow-y: auto;
     white-space: normal;
     scrollbar-width: none;
-    height: 0;
-    max-height: 430px;
+    opacity: 0;
+    max-height: 0;
     /* max-height: 200px; */
-    transition: height 5s ease;      
+    transition: opacity 1s ease, max-height 0.5s ease-in-out;      
 }
 .project:hover .section {
-    display: flex;
-    height: 100%;
-
+    max-height: 500px;
+    opacity: 1;
+}
+.project:hover .section .card {
+    transform: scale(1);
 }
 
-
-/* main .shape .section::-webkit-scrollbar {
+main .shape .section::-webkit-scrollbar {
     display: none;
-} */
+}
 
 .section .card {
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
     justify-content: center;
     flex: 0 0 auto;
     margin: 20px;
@@ -189,7 +192,7 @@ main .shape .project:nth-child(5) h2 {
     font-size: 16px;
     text-align: center;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     /* overflow: hidden; */
     transform-origin: center;
     overflow-wrap: break-word; /* Wrap the text within the specified dimensions */
@@ -262,9 +265,11 @@ main .shape .project:nth-child(5) h2 {
     border-radius: 15px;
     scrollbar-width: none;
     max-width: 490px;
-    display: none;
+    max-height: 0px;
+    transition: max-height 0.5s ease-in-out;
+    display: flex;
     background-color: #196b91;
-    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));   
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
 }
 
 .socials {
@@ -336,27 +341,28 @@ main .shape .project:nth-child(5) h2 {
         width: 200px;
         max-height: 200px;
         margin: 10px;
+        transform: scale(1);
     }
 
     .section {
         display: flex;
         flex-direction: row;
         width: 80vw;
-        height: auto;
-        /* max-height: 500px; */
+        height: 400px;
+        max-height: 500px;
         overflow-y: auto;
         overflow-x: auto;
+        opacity: 1;
     }
 
     .section .card a img{
         width: 80%;
     }
-    
+
     .project > h2{
-        flex-direction: column;
         align-items: center;
-        font-size: 18px;
-        max-height: 180px;
+        font-size: 16px;
+        max-height: 100px;
     }
     #operator1 {
         display: none;
