@@ -335,8 +335,8 @@ main .shape .section::-webkit-scrollbar {
         display: flex;
         flex-direction: row;
         height: 300px;
-        overflow-y: hidden;
-        overflow-x: hidden;
+        overflow-y: auto;
+        overflow-x: auto;
     }
 
     .section .card a img{
