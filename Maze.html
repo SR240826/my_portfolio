@@ -40,10 +40,51 @@
                     <button class="btn btn-danger" id="btn_right">right</button>
                 </div>
             </div>
-            <div class="workflow">
-                <p>My workflow for writing this code</p>
-                <iframe id="miro" width="768" height="412" src="https://miro.com/app/live-embed/uXjVNwSCqZQ=/?moveToViewport=-390,-662,1318,1503&embedId=752192343468" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
-            </div>
+            <div class="workflow flex-container">
+                <p>
+                    This is another procedural map (or maze in this case) creation model.
+                     First, a class of Cell was created, where it stored attributes like position (x, y) and walls check with Boolean. 
+                </p>
+                <pre>
+                    <code class="codes">
+                    class Cell {
+                    constructor(x, y) {
+                        this.x = x;
+                            this.y = y;
+                            this.walls = [true, true, true, true]; <span class="comments">// top, bottom, right, left of cell</span>
+                            this.visited = false;
+                            }
+                    }                   
+                    </code>
+                </pre>
+                <p>
+                    Then using “for loop” across canvas’s width and height, new instance of class Cell was introduced with each pixel position
+                     and pushed to an array grid. Then the player and the target was spawned on a random position independently. Player and 
+                     target was spawned first cause that way it’s not needed to keep checking wall collision, which could lead to much longer 
+                     or even an infinite loop. <br>After that setting a cell size variable, whole canvas was again iterated with another for 
+                     loop. In this case, we did not need to check whole grid, rather each cell width or height interval. For example, if our 
+                     cell size is 20 and array of <code>grid = [(x0, y0), (x1, y0), … , (x1, y1), (x2, y2)…..(xn, yn)]</code>, we iterate like following :
+
+                </p>
+                <pre >
+                    <code>
+                        For the 1st row of width: [0,0] to [20, 0] to [40, 0] and so on
+                        For the 2nd row of width: [0,20] to [20, 20] to [40, 20] and so on
+                        ....
+                        ...
+                    </code>
+                </pre>
+                <p>
+                    While within the iteration, we check a random side <code>(top, bottom, right or left)</code> of each pixel position. Except the checked side, 
+                    all other sides will be used to make walls. This is done by setting false to <code>“walls”</code> attribute of <code>class Cell</code>. This also ensures 
+                    that there will be always an open path in a square cell. After that all had to do is draw the elements and implement the player 
+                    movement controls.
+                </p>
+                <div style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+                    <p style="align-self: center;">My workflow for writing this code</p>
+                    <iframe id="miro" width="768" height="412" src="https://miro.com/app/live-embed/uXjVNwSCqZQ=/?moveToViewport=-390,-662,1318,1503&embedId=752192343468" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+                </div>
+                </div>
         </main>
         <footer class="footer flex-container">
             <div>

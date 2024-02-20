@@ -278,7 +278,13 @@ function gameover () {
         solved.style.display = "block";
     }
 }
-addEventListener("resize",()=>{location.reload()})
+let ftwidth = innerWidth;
+addEventListener("resize",()=>{
+    if(ftwidth !== innerWidth){
+        location.reload();
+    }
+    else return;
+})
 window.addEventListener('keydown', moveplayer);
 setup();
 
