@@ -26,8 +26,8 @@ function setup() {
         canvas.width = 200;
         canvas.height = 200;
         cellSize = 20;
-        miro.width = 350;
-        miro.height = 768;
+        // miro.width = 300;
+        // miro.height = 768;
     }
     for (let y = 0; y < canvas.height / cellSize; y++) {
         for (let x = 0; x < canvas.width / cellSize; x++) {
@@ -278,7 +278,7 @@ function gameover () {
         solved.style.display = "block";
     }
 }
-
+addEventListener("resize",()=>{location.reload()})
 window.addEventListener('keydown', moveplayer);
 setup();
 

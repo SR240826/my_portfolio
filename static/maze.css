@@ -69,4 +69,20 @@ button {
     padding-top: 50px;
     z-index: 1;
 }
+#miro {
+    width: 60vw;
+    height: 60vh
+}
 
+@media only screen and (max-height: 1000px) {
+    #tutorial{
+        display: none;
+    }
+    .btnctrls {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px
+    }
+}
