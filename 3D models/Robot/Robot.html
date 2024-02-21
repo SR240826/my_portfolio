@@ -57,8 +57,7 @@
         <div class="container">
             <figure>
                 <img src="robot wireframe toggle clay.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot side view">
-                <img src="robot wireframe toggle.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot front view">
-                <img src="robot wireframe toggle on.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot back view">  
+                <img src="robot wireframe toggle.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot front view"> 
             </figure>
             <figcaption id="caption01">Fig.02: My chibi robot</figcaption>
         </div>
@@ -69,8 +68,28 @@
         <figure>
             <img src="UDIM.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="UV layout for UDIM">
             <figcaption>Fig.03: UV layout for UDIM</figcaption>
+        </figure>
+        <p>
+            Substance painter already has presets available of packed texture for export targeting most of the rendered engine such as unity, 
+            unreal engine as well as usual for PBR textures. However, I prefer to set my own packed preset with PBR roughness while exporting. 
+            Because in some cases or the last painter version that I used, when exported with the unreal packed preset, the base texture was 
+            exported as black or transparent. I still could use that texture by separating Red, Green, Blue (RGB) and Alpha channel in render 
+            engine, but for base material, that wasn’t supposed to be the case and might confuse a client or future team members. But PBR texture 
+            pack works really great. Below you can see the Base material or diffusion texture and metallic-roughness-height map packed texture. 
+            One of metallic-roughness-height pack was from unreal engine preset and other was from PBR preset. No need to worry, if they look 
+            different as it might be due to the set up of grayscale to channel configurations. It just needs to be remembered the RGB channel 
+            configuration for metallic, roughness, height and set them up according 
+            in render engine.
+        </p>
+        <figure>
+            <img src="Robot base texture.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Diffusion packed texture (Full UDIM)">
+            <figcaption>Fig.04: Diffusion packed texture (Full UDIM)</figcaption>
+            <img src="Robot Metal Rough Height PBR.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Metallic, roughness and height map packed in PBR preset">
+            <figcaption>Fig.05: Metallic, roughness and height map packed in PBR preset</figcaption>
+            <img src="Robot Metal Rough Height unreal.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Metallic, roughness and height map packed in Unreal engine preset">
+            <figcaption>Fig.06: Metallic, roughness and height map packed in Unreal engine preset</figcaption>
             <img src="Texture node.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Packed texture separation">
-            <figcaption>Fig.04: Packed texture separation</figcaption>
+            <figcaption>Fig.07: Packed texture separation</figcaption>
         </figure>
     </div>
     <div id="modalimg" class="modalimg">
