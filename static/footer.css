@@ -71,6 +71,19 @@
     width: 80%;
     border-radius: 15px;
 }
+.copy a {
+    text-decoration: none;
+    color: #71c0ee;
+}
+.footer .copy p {
+    background: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    margin: 5px;
+    filter: none;
+    text-shadow: none;
+}
 
 @media only screen and (max-height: 1000px) {
     .flex-container {
