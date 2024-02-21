@@ -67,15 +67,24 @@ constructor(x, y) {
                      target was spawned first cause that way it’s not needed to keep checking wall collision, which could lead to much longer 
                      or even an infinite loop. <br>After that setting a cell size variable, whole canvas was again iterated with another for 
                      loop. In this case, we did not need to check whole grid, rather each cell width or height interval. For example, if our 
-                     cell size is 20 and array of <code>grid = [(x0, y0), (x1, y0), … , (x1, y1), (x2, y2)…..(xn, yn)]</code>, we iterate like following :
+                     cell size is 20 and array of 
+                    <code>
+                        grid = [(x<sub>0</sub>, y<sub>0</sub>), 
+                                (x<sub>1</sub>, y<sub>0</sub>),
+                                .... , 
+                                (x<sub>1</sub>, y<sub>1</sub>), 
+                                (x<sub>1</sub>, y<sub>2</sub>) 
+                                .... ,
+                                (x<sub>n</sub>, y<sub>n</sub>)]
+                    </code>, we iterate like following :
 
                 </p>
             </div>
             <div class="pre flex-container">
                 <pre>
                     <code>
-For the 1st row of width: [0,0] to [20, 0] to [40, 0] and so on
-For the 2nd row of width: [0,20] to [20, 20] to [40, 20] and so on
+For the 1st row along canvas width: [0,0] to [20, 0] to [40, 0] and so on
+For the 2nd row along canvas width: [0,20] to [20, 20] to [40, 20] and so on
 ....
 ...
                     </code>
