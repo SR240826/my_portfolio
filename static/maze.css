@@ -60,7 +60,7 @@ button {
 .btnctrls{
     display: none;
 }
-.workflow{
+.workflow {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -70,19 +70,27 @@ button {
     padding-top: 50px;
     z-index: 1;
 }
+.pre {
+    align-items: center;
+    justify-content: center;
+    max-width: 60vw;
+    border: 1px solid black;
+    background-color: rgb(43, 40, 40);
+    color: white;          
+}
 #miro {
     width: 50vw;
     height: 60vh;
     align-self: center;
 }
 
-pre {
-    align-self: center;
-    min-width: 60vw;
-    border: 1px solid black;
+code {
+    color: rgb(170, 230, 230) !important;
     background-color: rgb(43, 40, 40);
-    color: white;
-    padding-right: 100px;       
+    border: 5px solid rgb(43, 40, 40);
+}
+.comments{
+    color: rgb(194, 176, 169);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -91,9 +99,6 @@ pre {
     }
     .workflow{
         max-width: 80vw;
-    }
-    pre{
-        text-wrap: wrap;
     }
     #miro{
         width: 60vw;
