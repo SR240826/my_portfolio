@@ -1,11 +1,12 @@
-var cards = document.querySelectorAll('.section');
+var sections = document.querySelectorAll('.section');
 var projects = document.querySelectorAll(".project")
+let cards = document.querySelectorAll(".card")
 
 
 
-cards.forEach(function(card) {
-    card.addEventListener('wheel', function (event) {
-        let getstyle = window.getComputedStyle(card);
+sections.forEach(function(section) {
+    section.addEventListener('wheel', function (event) {
+        let getstyle = window.getComputedStyle(section);
         const flexDirection = getstyle.getPropertyValue('flex-direction');
         
         if(flexDirection !== "row") return;
@@ -13,63 +14,65 @@ cards.forEach(function(card) {
             event.preventDefault();
             var scrollAmount = event.deltaY*0.5;
             // event.preventDefault();
-            card.scrollTop += scrollAmount;
+            section.scrollTop += scrollAmount;
 
             // Check the direction of the scroll and adjust the scrollLeft accordingly
             if (scrollAmount < 0) {
                 // Scroll Up
-                card.scrollLeft -= 15;
+                section.scrollLeft -= 15;
             } else {
                 // Scroll Down
-                card.scrollLeft += 15;
+                section.scrollLeft += 15;
             }
             }
     })
 });
 
-// let childheight;
-// // toogle project collaspe
-// projects.forEach(function(project) {
-//     project.addEventListener("click", ()=> {
-//         if (innerWidth > 1000 && project.nextElementSibling.style.display !== "flex") {
-//             project.nextElementSibling.style.display = "flex";
-//             childheight = project.nextElementSibling.children[0].offsetHeight
-//             project.nextElementSibling.style.height = childheight + childheight*0.5 + "px"
-//         }
-//         else if (innerWidth > 1000 && project.nextElementSibling.style.display === "flex") {
-//             project.nextElementSibling.style.display = "none";
-//         } 
-//     })
-// })
+let childheight;
+// toogle project collaspe
+projects.forEach(function(project) {
+    project.addEventListener("click", ()=> {
+        if (innerWidth < 1500 && innerWidth > 1080 && project.children[1].style.maxHeight !== "675px") {
+            project.children[1].style.maxHeight = "675px";
+            project.children[1].style.opacity = "1"
+            childheight = project.children[1].children[0].offsetHeight
+            project.children[1].style.height = childheight + childheight*0.5 + "px"
+        }
+        else if (innerWidth < 1500 && innerWidth > 1080 && project.children[1].style.maxHeight === "675px") {
+            project.children[1].style.maxHeight = "0";
+            project.children[1].style.opacity = "0"
+        } 
+    })
+})
 
 // click and drag when flex row
 let ismousedown = false;
 let initialmouseX;
 let scrollX;
 
-cards.forEach(function(card) {
-    card.addEventListener("mousedown", (e) => {
+sections.forEach(function(section) {
+    section.addEventListener("mousedown", (e) => {
         ismousedown = true;
-        initialmouseX = e.pageX - card.offsetLeft;
-        scrollX = card.scrollLeft;
+        initialmouseX = e.pageX - section.offsetLeft;
+        scrollX = section.scrollLeft;
     })
 
-    card.addEventListener("mouseleave", () => {
+    section.addEventListener("mouseleave", () => {
         ismousedown = false;
     })
 
-    card.addEventListener("mouseup", () => {
+    section.addEventListener("mouseup", () => {
         ismousedown = false;
     })
 
 
-    card.addEventListener("mousemove", (e) => {
+    section.addEventListener("mousemove", (e) => {
         if (!ismousedown) return;
         
         e.preventDefault();
-        const x = e.pageX - card.offsetLeft;
+        const x = e.pageX - section.offsetLeft;
         const move = (x - initialmouseX) * 2;
-        card.scrollLeft = scrollX - move;
+        section.scrollLeft = scrollX - move;
     })
 })
 
