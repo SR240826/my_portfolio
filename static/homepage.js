@@ -17,4 +17,8 @@ contactbutton.addEventListener("click", ()=>{
 addEventListener("load",()=>{
     intro.classList.add("loaded");
     logo.classList.add("loaded");
+    setTimeout(function () {
+        myw.style.width = '100%';
+    }, 1000);
 })
+

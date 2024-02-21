@@ -32,6 +32,8 @@ body {
     letter-spacing: 5px;
     margin-top: 50px;
     z-index: 2;
+    will-change: contents;
+    text-rendering:optimizeSpeed;
 }
 .navbar-brand.loaded{
     top: 0;
@@ -50,7 +52,7 @@ body {
 }
 
 .welcome {
-    will-change: transform;
+    will-change: contents;
     position: relative;
     left: 200%;
     text-rendering: optimizeSpeed ;
@@ -58,7 +60,6 @@ body {
 }
 .welcome.loaded{
     left: 0;
-    transform-origin: right center;
     transition: left 2s ease-in-out;    
 }
 
@@ -75,17 +76,16 @@ main .flex-container{
     flex-direction: column;
     max-width: 60vw;
 }
-main .flex-container .myworks{
+.myworks {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 10px;
-
-    font-size: 32px;
+    font-size: 30px;
     font-weight: bold;
-    color: bisque;
+    color: rgba(255, 228, 196, 1);
     height: 80px;
-    background: rgb(18, 155, 87);
+    background: rgb(18, 155, 87, 1);
     border-radius: 15px;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     font-family: 'Poppins', sans-serif;
@@ -290,7 +290,7 @@ main .shape .section::-webkit-scrollbar {
         font-size: 32px;
         max-width: 80vw;
     }
-    main .flex-container .myworks{
+    main .flex-container .myworks > p{
         font-size: 24px;
     }
     .flex-container .navbar-brand {
