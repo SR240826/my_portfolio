@@ -42,10 +42,16 @@ body {
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-.welcome > p{
-    opacity: 0;
-    text-rendering:optimizeSpeed ;
-    transition: opacity 1s ease-in;
+.welcome {
+    will-change: transform;
+    transform: scale(0);
+    /* text-rendering:optimizeSpeed ; */
+    
+}
+.welcome.loaded{
+    transform: scale(1);
+    transform-origin: right center;
+    transition: transform 0.5s ease-in;    
 }
 
 #author {

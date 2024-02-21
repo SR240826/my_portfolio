@@ -90,5 +90,5 @@ contactbutton.addEventListener("click", ()=>{
 })
 
 addEventListener("load",()=>{
-    intro.style.opacity = "1";
+    intro.classList.add("loaded");
 })
