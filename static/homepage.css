@@ -180,7 +180,7 @@ main .shape .section::-webkit-scrollbar {
     letter-spacing: 1.5px;
     font-size: 16px;
     text-align: center;
-    /* filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     transition: transform 0.5s ease;
     transform-origin: center;
     overflow-wrap: break-word;
@@ -279,11 +279,6 @@ main .shape .section::-webkit-scrollbar {
     color: #71c0ee;
 }
 
-@media only screen and (max-width: 1500px) and (min-width: 1080px){
-    .section .card{
-        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    }
-}
 @media only screen and (max-width: 1081px) {
     main .flex-container {
         font-size: 32px;
@@ -313,7 +308,6 @@ main .shape .section::-webkit-scrollbar {
         width: 60vw;
         margin: 15px;
         opacity: 1;
-        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     }
     .section {
         flex-direction: row;
