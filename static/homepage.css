@@ -28,16 +28,19 @@ body {
     color: rgba(255, 165, 0, 1) !important;
     font-size: 50px;
     position: fixed;
-    top: -10%;
+    top: -20%;
     letter-spacing: 5px;
     margin-top: 50px;
     z-index: 2;
     will-change: contents;
+    transform: scale(0);
     text-rendering:optimizeSpeed;
 }
 .navbar-brand.loaded{
+    transform: scale(1);
+    transform-origin: bottom center;
     top: 0;
-    transition: top 2s ease-in-out; 
+    transition: top 2s ease-in-out, transform 0.1s ease-in-out; 
 }
 
 .welcome {
@@ -55,12 +58,16 @@ body {
     will-change: contents;
     position: relative;
     left: 200%;
+    transform: scale(0);
     text-rendering: optimizeSpeed ;
+      
     
 }
 .welcome.loaded{
     left: 0;
-    transition: left 2s ease-in-out;    
+    transform: scale(1);
+    transition: left 2s ease-in-out, transform 0.2s ease-in-out;
+      
 }
 
 #author {
