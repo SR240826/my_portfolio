@@ -13,15 +13,12 @@ sections.forEach(function(section) {
         else {
             event.preventDefault();
             var scrollAmount = event.deltaY*0.5;
-            // event.preventDefault();
             section.scrollTop += scrollAmount;
 
-            // Check the direction of the scroll and adjust the scrollLeft accordingly
             if (scrollAmount < 0) {
                 // Scroll Up
                 section.scrollLeft -= 15;
             } else {
-                // Scroll Down
                 section.scrollLeft += 15;
             }
             }
