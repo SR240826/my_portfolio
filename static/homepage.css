@@ -40,9 +40,12 @@ body {
     font-weight:normal;
     font-family: 'Montserrat Alternates', sans-serif;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    opacity: 1;
+}
+
+.welcome > p{
+    opacity: 0;
     text-rendering:optimizeSpeed ;
-    transition: opacity 1s ease-out;
+    transition: opacity 1s ease-in;
 }
 
 #author {

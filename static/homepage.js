@@ -88,3 +88,7 @@ contactbutton.addEventListener("click", ()=>{
         contactform.style.maxHeight = "0px";
     }
 })
+
+addEventListener("load",()=>{
+    intro.style.opacity = "1";
+})
