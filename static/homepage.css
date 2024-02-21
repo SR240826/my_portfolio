@@ -40,7 +40,11 @@ body {
     font-weight:normal;
     font-family: 'Montserrat Alternates', sans-serif;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    opacity: 1;
+    text-rendering:optimizeSpeed ;
+    transition: opacity 1s ease-out;
 }
+
 #author {
     color: rgb(254, 255, 254);
     font-weight: bolder;
@@ -317,6 +321,7 @@ main .shape .section::-webkit-scrollbar {
         max-height: 400px;
         width: 60vw;
         margin: 15px;
+        opacity: 1;
     }
 
     .section {
