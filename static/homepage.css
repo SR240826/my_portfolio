@@ -157,12 +157,12 @@ main .shape .project:nth-child(3) h2 {
     scrollbar-width: none;
     opacity: 0;
     max-height: 0;
-    /* max-height: 200px; */
+    /* transform: scale(0); */
     transition: opacity 1s ease, max-height 0.5s ease-in-out;      
 }
 .project:hover .section {
-    max-height: 500px;
-
+    max-height: 675px;
+    /* transform: scale(1); */
     opacity: 1;
 }
 /* .project:hover .section .card {
