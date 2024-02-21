@@ -1,13 +1,19 @@
 body {
-    background-image: linear-gradient(to right, #0a192f 0%,  rgb(36, 60, 94) 25%, #385179 50%, rgb(36, 60, 94) 75%, #0a192f 100%);
-    animation: color-transition 10s ease-in-out infinite alternate;
+    background: linear-gradient(to right, #0a192f 0%, rgb(36, 60, 94) 25%, #385179 50%, rgb(36, 60, 94) 75%, #0a192f 100%);
+    animation: color-transition 8s ease-in-out infinite alternate;
+    text-rendering:optimizeSpeed ;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 @keyframes color-transition {
-    0% { background: #0a192f; }
-    50% { background: #385179; }
-    75% { background: #0a192f; }
-    100% { background: #0a192f; }
-  }
+    0%, 75%, 100% {
+        background: #0a192f;
+    }
+    50% {
+        background: #385179;
+    }
+}
+
 .flex-container {
     max-width: 80vw;
     margin: 0 auto;
@@ -19,33 +25,29 @@ body {
 .flex-container .navbar-brand {
     display: flex;
     font-family: "Monofett", monospace;
-    font-weight: 400;
-    font-style: normal;
     color: rgba(255, 165, 0, 1) !important;
     font-size: 50px;
-    max-width: 20vw;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     position: fixed;
+    letter-spacing: 5px;
     margin-top: 50px;
     z-index: 2;
 }
 
-.flex-container .welcome {
+.welcome {
     align-self: center;
-    padding-top: 100px;
-    padding-bottom: 150px;
+    padding-top: 250px;
+    padding-bottom: 250px;
     text-align: right;
     color: #daddba;;
-    letter-spacing: 100%;
-    font-weight:normal;
+    letter-spacing: 5px;
+    font-size: 40px;
     font-family: 'Montserrat Alternates', sans-serif;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .welcome {
     will-change: transform;
     transform: scale(0);
-    /* text-rendering:optimizeSpeed ; */
+    text-rendering:optimizeSpeed ;
     
 }
 .welcome.loaded{
@@ -66,15 +68,13 @@ main .flex-container{
     display: flex;
     flex-direction: column;
     max-width: 60vw;
-    font-size: 64px;
 }
 main .flex-container .myworks{
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin: 10px;
-    gap: 20px;
+
     font-size: 32px;
     font-weight: bold;
     color: bisque;
@@ -84,10 +84,6 @@ main .flex-container .myworks{
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     font-family: 'Poppins', sans-serif;
 }
-.myworks > div {
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-}
-
 
 main .shape .project > h2 {
     display: flex;
@@ -97,8 +93,6 @@ main .shape .project > h2 {
     height: 250px;
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    z-index: 3;
 }
 
 
@@ -110,12 +104,6 @@ main .shape .project:nth-child(2) h2 {
 }
 main .shape .project:nth-child(3) h2 {
     background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(204, 185, 80, 0.76), rgba(34, 77, 80, 0));
-}
-#texturebg {
-    background-color: burlywood;
-}
-#artbg {
-    background-color: burlywood;
 }
 
 #parentheses {
@@ -163,12 +151,11 @@ main .shape .project:nth-child(3) h2 {
     white-space: normal;
     scrollbar-width: none;
     max-height: 0;
-    transition:  max-height 0.5s ease-in-out;      
+    opacity: 0;
+    transition:  max-height 0.5s ease-in-out, opacity 1s ease-in-out;      
 }
 .project:hover .section {
     max-height: 675px;
-}
-.project:hover .section .card {
     opacity: 1;
 }
 
@@ -177,7 +164,6 @@ main .shape .section::-webkit-scrollbar {
 }
 
 .section > .card {
-    opacity: 0;
     justify-content: center;
     flex: 0 0 auto;
     margin: 20px;
@@ -194,8 +180,8 @@ main .shape .section::-webkit-scrollbar {
     letter-spacing: 1.5px;
     font-size: 16px;
     text-align: center;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    transition: transform 0.5s ease, opacity 1s ease;
+    /* filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)); */
+    transition: transform 0.5s ease;
     transform-origin: center;
     overflow-wrap: break-word;
 }
@@ -219,20 +205,16 @@ main .shape .section::-webkit-scrollbar {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    max-width: 100vw;
-    position: relative;
-    left: 0;
-    bottom: 0;
-    margin-bottom: 0;
+    padding-top: 100px;
     top: 15vh;
-    width: 100%;
+
 }
 
 .contact {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .contactbutton {
@@ -246,18 +228,13 @@ main .shape .section::-webkit-scrollbar {
     font-size: 16px;
     text-align: center;
     color: rgb(241, 240, 153) !important;
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
-    text-shadow: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
-    /* margin-bottom: 100px; */
-
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
 }
 
 .contactbutton:hover {
-    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
-    color: rgb(49, 45, 45) !important;
-    font-weight: bold;
-    background-color: rgb(90, 224, 142);
-    transform: scale(1.1);
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
+    background-color: rgb(69, 112, 153, 0.5);
+    transform: scale(0.95);
     cursor: pointer;
 }
 
@@ -302,6 +279,11 @@ main .shape .section::-webkit-scrollbar {
     color: #71c0ee;
 }
 
+@media only screen and (max-width: 1500px) and (min-width: 1080px){
+    .section .card{
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    }
+}
 @media only screen and (max-width: 1081px) {
     main .flex-container {
         font-size: 32px;
@@ -331,16 +313,13 @@ main .shape .section::-webkit-scrollbar {
         width: 60vw;
         margin: 15px;
         opacity: 1;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     }
-
     .section {
-        display: flex;
         flex-direction: row;
-        width: 80vw;
+        width: 85vw;
         height: 500px;
         max-height: 675px;
-        overflow-y: auto;
-        overflow-x: auto;
         opacity: 1;
     }
 
@@ -349,7 +328,7 @@ main .shape .section::-webkit-scrollbar {
     }
 
     .project > h2{
-        align-items: center;
+        /* align-items: center; */
         font-size: 16px;
         max-height: 100px;
     }
@@ -365,14 +344,8 @@ main .shape .section::-webkit-scrollbar {
         display: flex;
         font-weight: normal;
     }
-    .bi-palette {
+    .bi-palette, .bi-file-earmark-code, .bi-badge-3d-fill {
         margin-right: 5px;
     }
-    .bi-file-earmark-code{
-        margin-right: 5px;
-    }
-    .bi-badge-3d-fill {
-
-        margin-right: 5px;
-    }
+    
 }
