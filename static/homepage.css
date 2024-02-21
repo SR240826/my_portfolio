@@ -28,9 +28,14 @@ body {
     color: rgba(255, 165, 0, 1) !important;
     font-size: 50px;
     position: fixed;
+    top: -10%;
     letter-spacing: 5px;
     margin-top: 50px;
     z-index: 2;
+}
+.navbar-brand.loaded{
+    top: 0;
+    transition: top 2s ease-in-out; 
 }
 
 .welcome {
@@ -46,14 +51,15 @@ body {
 
 .welcome {
     will-change: transform;
-    transform: scale(0);
-    text-rendering:optimizeSpeed ;
+    position: relative;
+    left: 200%;
+    text-rendering: optimizeSpeed ;
     
 }
 .welcome.loaded{
-    transform: scale(1);
+    left: 0;
     transform-origin: right center;
-    transition: transform 0.5s ease-in;    
+    transition: left 2s ease-in-out;    
 }
 
 #author {
