@@ -26,13 +26,7 @@ cards.forEach(function(card) {
             }
     })
 });
-let childcard = document.querySelectorAll(".cards");
-childcard.forEach(function(chcard) {
-    chcard.addEventListener("mouseenter", ()=>{
-        chcard.style.transform = "scale(1.2)";
-        console.log("true")
-    })
-})
+
 // let childheight;
 // // toogle project collaspe
 // projects.forEach(function(project) {
@@ -82,9 +76,13 @@ cards.forEach(function(card) {
 
 contactbutton.addEventListener("click", ()=>{
     if(contactform.style.maxHeight !== "1100px") {
-        contactform.style.maxHeight = "1100px"
-        setTimeout(()=>{
-            scrollTo({top: (document.documentElement.scrollHeight - contactform.scrollHeight), behavior:'smooth'}); }, 1000)
+        contactform.style.maxHeight = "1100px";
+        setTimeout(function() {
+            contactform.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }, 1000);
     }
     else {
         contactform.style.maxHeight = "0px";
