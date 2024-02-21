@@ -77,22 +77,19 @@ main .flex-container .myworks{
 }
 
 
-main .shape .project h2 {
+main .shape .project > h2 {
     display: flex;
     align-items: center;
     justify-content: center;
     /* background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(39, 158, 102, 0.8), rgba(34, 77, 80, 0)); */
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     height: 250px;
-    z-index: 2;
-    
-}
-.project > h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: bolder;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 3;
 }
+
 
 main .shape .project:nth-child(1) h2 {
     background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(130, 43, 180, 0.8), rgba(34, 77, 80, 0));
@@ -144,7 +141,6 @@ main .shape .project:nth-child(3) h2 {
 .project:hover {
     cursor: pointer;
     background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(104, 238, 216, 0.342), rgba(34, 77, 80, 0));
-
 }
 
 .section {
@@ -157,27 +153,26 @@ main .shape .project:nth-child(3) h2 {
     white-space: normal;
     scrollbar-width: none;
     /* max-width: 30vw; */
-    opacity: 0;
+    /* opacity: 0; */
     max-height: 0;
     /* transform: scale(0); */
-    transition: opacity 1s ease, max-height 0.5s ease-in-out;      
+    transition:  max-height 0.5s ease-in-out;      
 }
 .project:hover .section {
     max-height: 675px;
     /* transform: scale(1); */
+    /* opacity: 1; */
+}
+.project:hover .section .card {
     opacity: 1;
 }
-/* .project:hover .section .card {
-    opacity: 1;
-} */
 
 main .shape .section::-webkit-scrollbar {
     display: none;
 }
 
 .section > .card {
-    /* opacity: 0; */
-    transition: transform 0.3s ease-in-out;
+    opacity: 0;
     /* align-items:center ; */
     justify-content: center;
     flex: 0 0 auto;
@@ -196,7 +191,7 @@ main .shape .section::-webkit-scrollbar {
     font-size: 16px;
     text-align: center;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 1s ease;
     /* overflow: hidden; */
     transform-origin: center;
     overflow-wrap: break-word; /* Wrap the text within the specified dimensions */
