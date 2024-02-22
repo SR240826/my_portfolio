@@ -1,3 +1,23 @@
+/* monofett-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Monofett';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/monofett-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+  
+  
+
 body {
     background: linear-gradient(to right, #0a192f 0%, rgb(36, 60, 94) 25%, #385179 50%, rgb(36, 60, 94) 75%, #0a192f 100%);
     animation: color-transition 8s ease-in-out infinite alternate;
@@ -50,9 +70,9 @@ body {
     padding-bottom: 250px;
     text-align: right;
     color: #daddba;;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     font-size: 40px;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Poppins', Verdana, sans-serif;
     will-change: contents;
     position: relative;
     left: 100%;
@@ -103,7 +123,7 @@ main .shape .project > h2 {
     justify-content: center;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     height: 250px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Verdana, sans-serif;
     font-weight: bolder;
 }
 
@@ -188,7 +208,7 @@ main .shape .section::-webkit-scrollbar {
     max-width: 60vw;
     min-height: 350px;
     max-height: 450px;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Poppins', Verdana, sans-serif;
     letter-spacing: 1.5px;
     font-size: 16px;
     text-align: center;
@@ -236,7 +256,7 @@ main .shape .section::-webkit-scrollbar {
     max-width: 150px;
     height: 50px;
     background-color: rgb(69, 112, 153);
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Poppins', Verdana, sans-serif;
     font-size: 18px;
     text-align: center;
     color: rgb(255, 255, 255) !important;
