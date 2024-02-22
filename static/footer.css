@@ -1,3 +1,20 @@
+/* monofett-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Monofett';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/monofett-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 .footer{
     display: flex;
@@ -48,7 +65,7 @@
     max-width: 25vw;
     max-height: 300px;
     min-height: 300px;    
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Poppins', Verdana, sans-serif !important;
     letter-spacing: 1.5px;
     font-size: 16px;
     text-align: center;
@@ -77,7 +94,7 @@
 }
 .footer .copy p {
     background: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Verdana, sans-serif;
     font-size: 12px;
     text-align: center;
     margin: 5px;
