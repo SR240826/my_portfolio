@@ -15,7 +15,10 @@ contactbutton.addEventListener("click", ()=>{
 })
 
 addEventListener("load",()=>{
-    intro.classList.add("loaded");
     logo.classList.add("loaded");
+    if(innerWidth > 1080){
+        intro.classList.add("loaded");
+        
+    }
 })
 

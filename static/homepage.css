@@ -310,13 +310,13 @@ main .shape .section::-webkit-scrollbar {
         font-size: 24px;
         padding-bottom: 100px;
         left: 0;
-        opacity: 0;
+        opacity: 1;
         transform: scale(1);
     }
-    .welcome.welcome.loaded{
+    /* .welcome.welcome.loaded{
         opacity: 1;
         transition: opacity 0.5s ease-in-out;
-    }
+    } */
 
     main .shape {
         scroll-behavior: smooth;
