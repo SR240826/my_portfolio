@@ -57,13 +57,15 @@ body {
     position: relative;
     left: 100%;
     transform: scale(0);
+    opacity: 0;
     text-rendering: optimizeSpeed ;
 }
 
 .welcome.loaded{
     left: 0;
     transform: scale(1);
-    transition: left 1s ease-in-out, transform 1s ease-in-out;
+    opacity: 1;
+    transition: left 1s ease-in-out, transform 1s ease-in-out, opacity 2s ease-in-out;
       
 }
 
@@ -311,13 +313,15 @@ main .shape .section::-webkit-scrollbar {
         font-size: 24px;
         padding-bottom: 100px;
         left: 0;
-        opacity: 1;
+        top: -50%;
+        opacity: 0;
         transform: scale(1);
     }
-    /* .welcome.welcome.loaded{
+    .welcome.welcome.loaded{
+        top: 0;
         opacity: 1;
-        transition: opacity 0.5s ease-in-out;
-    } */
+        transition: opacity 3s ease-in-out, top 2s ease-in-out;
+    }
 
     main .shape {
         scroll-behavior: smooth;
@@ -331,10 +335,6 @@ main .shape .section::-webkit-scrollbar {
         width: 60vw;
         margin: 15px;
         opacity: 1;
-    }
-    .card > a{
-        position: relative;
-        top: 50px;
     }
     .section {
         flex-direction: row;
