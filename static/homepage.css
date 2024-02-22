@@ -297,7 +297,13 @@ main .shape .section::-webkit-scrollbar {
         font-size: 24px;
     }
     .flex-container .navbar-brand {
-        font-size: 32px;        
+        font-size: 32px;
+        top: 0;        
+    }
+    .navbar-brand.loaded{
+        transform: scale(1);
+        transform-origin: bottom center;
+        transition: transform 0.3s ease-in-out; 
     }
     .flex-container .welcome {
         max-width: 80vw;
