@@ -1,4 +1,3 @@
-
 contactbutton.addEventListener("click", ()=>{
     if(contactform.style.maxHeight !== "1100px") {
         contactform.style.maxHeight = "1100px";
