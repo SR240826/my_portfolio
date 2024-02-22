@@ -249,7 +249,7 @@ main .shape .section::-webkit-scrollbar {
     gap: 10px;
 }
 
-.contactbutton {
+.contactbutton, .togglebutton {
     border-color:rgba(0, 0, 0, 1);
     border-radius: 15px;
     width: 150px;
@@ -261,9 +261,16 @@ main .shape .section::-webkit-scrollbar {
     text-align: center;
     color: rgb(255, 255, 255) !important;
     filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+    
+}
+.contactbutton{
+    display: block;
+}
+.togglebutton{
+    display: none;
 }
 
-.contactbutton:hover {
+.contactbutton:hover, .togglebutton:hover {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5));
     background-color: rgb(69, 112, 153, 0.5);
     transform: scale(0.95);
