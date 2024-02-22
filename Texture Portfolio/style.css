@@ -66,7 +66,7 @@ h2 {
     color: #daddba;
     
 }
-.container > p {
+.container > div {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -77,8 +77,7 @@ h2 {
     font-family: 'Poppins', Verdana, sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align:justify;
-    padding-top: 20px;
-    
+    padding-top: 20px;    
 }
 
 .container > figure {
@@ -194,7 +193,7 @@ figure > img:hover{
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
-    z-index: 1;
+    z-index: 2;
 }
 
 .close:hover,

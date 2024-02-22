@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preload" href="../static/fonts/monofett-v23-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../static/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
     <script src="script.js" defer></script>
     <link href="style.css" rel="stylesheet">
     <script src="../static/footer.js" defer type="module"></script>
     <link rel="stylesheet" href="../static/footer.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Crimson+Text:wght@700&family=Monofett&family=Montserrat+Alternates&family=VT323&display=swap" rel="stylesheet">
   </head>
 <body>
   <nav class="navbar">
@@ -32,10 +33,12 @@
   </header>
       
   <div class="container">
+    <div>
       <p>
           What do you see inside a magic researcher’s lab or library from a fantasy world? In my imagination it was a cluster of books and 
           pages scattered across the floor. I started this project to create a bunch of old books. And it was a great learning process.
       </p>
+    </div>
       <div class="container">
           <figure>
               <img src="Books/books render 2.png" class="sd_img" width="20%" alt="The ocean of knowledge!!!">
@@ -44,17 +47,19 @@
           </figure>
           <figcaption id="caption01">Fig.01: The ocean of knowledge!!!</figcaption>
       </div>
-      <p>
-          This texture was really interesting to work on. Making the spine of books (binding part of the back cover) was something new 
-          to me to produce only from nodes and not from any 3D depth backed object. The usage of grayscale to produce height maps is well known. 
-          But working with it and bringing out what we imagine was really something. To make the particular shape of book-spine, 
-          I used the shape node and then added a linier gradient node which can be rotated between 0 and 90 degree resulting the gradient 
-          along either at y axis or x axis respectively. Then I adjusted the grayscale value with a curve node. In my local library I had noticed some 
-          old books had few bumpy cross section on spine either due to design or to separate the name and author. With the last used gradient 
-          node and a transformation node I connected it to a tile sampler node so that I can control the number of this shape. 
-          The gradient node helps to maintain the slope around the edges and I didn’t need to get another headache on adjusting it. 
-          Rest of the node for the spine were either transform to control thickness and blend to join other parts.
-      </p>
+      <div>
+        <p>
+            This texture was really interesting to work on. Making the spine of books (binding part of the back cover) was something new 
+            to me to produce only from nodes and not from any 3D depth backed object. The usage of grayscale to produce height maps is well known. 
+            But working with it and bringing out what we imagine was really something. To make the particular shape of book-spine, 
+            I used the shape node and then added a linier gradient node which can be rotated between 0 and 90 degree resulting the gradient 
+            along either at y axis or x axis respectively. Then I adjusted the grayscale value with a curve node. In my local library I had noticed some 
+            old books had few bumpy cross section on spine either due to design or to separate the name and author. With the last used gradient 
+            node and a transformation node I connected it to a tile sampler node so that I can control the number of this shape. 
+            The gradient node helps to maintain the slope around the edges and I didn’t need to get another headache on adjusting it. 
+            Rest of the node for the spine were either transform to control thickness and blend to join other parts.
+        </p>
+      </div>
       <figure>
           <img src="Books/Book_spine.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="The book spine creation">
           <figcaption>Fig.02: The book spine creation</figcaption>
@@ -62,48 +67,51 @@
           <img src="Books/Spine_crease.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="The creases beside the spine">
           <figcaption>Fig.03: The creases beside the spine</figcaption>
       </figure>
-      <p>
-          If you open a book, you will notice that it creates creases on the side of its spine. So I had to add them as well. 
-          It was done with perlin noise, one of the noise that is really useful and produce interesting shape in substance designer. 
-          I wrapped it with both the spine and rectangular shape of cover to blend it smoothly.
-      </p>
-      <p>
-          Next I used Shape Splatter to scattered those books. I used this node instead of tile generator because it has height scale 
-          inside that can be changed randomly.  Tile generator can do this as well, but probably needs more than one nodes to work with that. 
-          I want to add more elements to it in future. Kind of got stuck when I wanted to add multiple text titles procedurally added to books 
-          which are scattered.
-      </p>
+      <div>
+        <p>
+            If you open a book, you will notice that it creates creases on the side of its spine. So I had to add them as well. 
+            It was done with perlin noise, one of the noise that is really useful and produce interesting shape in substance designer. 
+            I wrapped it with both the spine and rectangular shape of cover to blend it smoothly.
+        </p>
+        <p>
+            Next I used Shape Splatter to scattered those books. I used this node instead of tile generator because it has height scale 
+            inside that can be changed randomly.  Tile generator can do this as well, but probably needs more than one nodes to work with that. 
+            I want to add more elements to it in future. Kind of got stuck when I wanted to add multiple text titles procedurally added to books 
+            which are scattered.
+        </p>
+      </div>
       <figure>
           <img src="Books/Book_tiles.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Tiles of books and pages">
           <figcaption>Fig.04: Tiles of books and pages</figcaption>
-          <!-- <br><br>
-          <img src="Books/books render 4.png" class="sd_img" width="20%" alt="Fig.05: Floor of books" id="last_render">
-          <figcaption>Fig.05: Floor of books</figcaption> -->
       </figure>
-      <p>
-          This project introduced me to some interesting shapes. These shapes will surely help me in future. Apparently I might produce a bookshelf or a whole library with these shapes later!
-      </p>
+      <div>
+        <p>
+            This project introduced me to some interesting shapes. These shapes will surely help me in future. Apparently I might produce a bookshelf or a whole library with these shapes later!
+        </p>
+      </div>
   </div>
-  <br><br><br>
+  <br><br>
   <header>
       <div class="container">
-          <h2>
+          <h1>
               Sci Fi/Hard Surface Texture
-          </h2>
+          </h1>
       </div>
   </header>
   
   <div class="container">
-      <p>
-          This is one of the efforts to make different shapes within substance designer. I did not have anything particular in my mind when created this Sci fi surface texture. 
-          However, I wanted to produce a normal trimsheet like texture. Most of the works consist of creating different shape and blending them together in final result. 
-          <br><br>
-          The shapes in this texture were created manually with transform, subtract and changing grayscale of initial shapes. There is also mirror nodes you might 
-          notice in there that works really well for sci fi texture. But for overly repeated elements, mirror node makes it tough to control the overall texture 
-          in final result. Same can be said for transformation nodes because of the changes in axis (x, y) with those nodes. Check the images from the slide 
-          bellow to see final result as well as the substance designer nodes.
+      <div>
+        <p>
+            This is one of the efforts to make different shapes within substance designer. I did not have anything particular in my mind when created this Sci fi surface texture. 
+            However, I wanted to produce a normal trimsheet like texture. Most of the works consist of creating different shape and blending them together in final result. 
+            <br><br>
+            The shapes in this texture were created manually with transform, subtract and changing grayscale of initial shapes. There is also mirror nodes you might 
+            notice in there that works really well for sci fi texture. But for overly repeated elements, mirror node makes it tough to control the overall texture 
+            in final result. Same can be said for transformation nodes because of the changes in axis (x, y) with those nodes. Check the images from the slide 
+            bellow to see final result as well as the substance designer nodes.
 
-      </p>
+        </p>
+      </div>
       <div id="scifisurface" class="carousel slide">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#scifisurface" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preload" href="../static/fonts/monofett-v23-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../static/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
     <script src="script.js" defer></script>
     <link href="style.css" rel="stylesheet">
     <script src="../static/footer.js" defer type="module"></script>
     <link rel="stylesheet" href="../static/footer.css" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Crimson+Text:wght@700&family=Monofett&family=Montserrat+Alternates&family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -27,16 +28,16 @@
             </h1>        
         </div>
     </header>
-    
-        
     <div class="container">
-        <p>
-            I always have soft spot for stylized arts and wanted to make some myself. This stylized wooden tiles texture was 
-            one of the works I had a great deal of pleasure doing. There is no set of rule for stylized artworks, but most of 
-            these tends to have smoother surface with only eye caching details than real life objects. Also they consist of a 
-            broad range of color combination to make it attractive to viewers. This wooden tiles texture was an effort to 
-            simply achieve that sort of effect.
-        </p>
+        <div>
+            <p>
+                I always have soft spot for stylized arts and wanted to make some myself. This stylized wooden tiles texture was 
+                one of the works I had a great deal of pleasure doing. There is no set of rule for stylized artworks, but most of 
+                these tends to have smoother surface with only eye caching details than real life objects. Also they consist of a 
+                broad range of color combination to make it attractive to viewers. This wooden tiles texture was an effort to 
+                simply achieve that sort of effect.
+            </p>
+        </div>
         <div class="container">
             <figure>
                 <img src="Wood tile/Wood render.png" class="sd_img" width="20%" alt="Stylized Wood">
@@ -45,41 +46,50 @@
             </figure>
             <figcaption id="caption01">Fig.01: Stylized Wood</figcaption>
         </div>
-        <p>
-            As my aim was to generate a tiles texture, the first node was obviously tile generator. Now in stylized environment, 
-            in general the tiles are not total flat leveled. There will be some bump variation among those tiles. So at first I 
-            was thinking of using simple gradient grayscale texture, but that was getting more complex to bring variations across 
-            the board. However, I found out a new (new for me!) node named “Flood Fill” which applies a variation color fills on 
-            white texture. And then another node “Flood fill to gradient” will convert that color to grayscale value. I might not 
-            be that good at explaining that node, but the advantage of using these nodes is that the resultant gradient will be 
-            distributed to all tiles regardless of tiles position. Also I can repeat these nodes and change the gradient route 
-            which will create more variation along the way. After that blending such multiple nodes will create a gradient effect 
-            of having two transition on all tiles, black to white and white to black or vice versa. This will create the effect of 
-            bumped tiles around whiter area and flat or lower depth around darker area. Now all tiles should not be bumpy, 
-            otherwise it will end up irritating the final scene. So to exclude the bumpiness on some tiles, I used a noise mask to 
-            flood fill to grayscale node in order to excluding some tiles. This way the final blend produced the irregular depth 
-            for whole tile.
-        </p>
+        <div>
+            <p>
+                As my aim was to generate a tiles texture, the first node was obviously tile generator. Now in stylized environment, 
+                in general the tiles are not total flat leveled. There will be some bump variation among those tiles. So at first I 
+                was thinking of using simple gradient grayscale texture, but that was getting more complex to bring variations across 
+                the board. However, a node named “Flood Fill” which applies a variation color fillers on 
+                plain texture. And then another node “Flood fill to gradient” can be used with combination and convert that color to grayscale value. The advantage 
+                of using these nodes is that the resultant gradient will be 
+                distributed to all tiles regardless of tiles position. Also these nodes can be repeated and changeed the gradient route 
+                which will create more variation along the way.
+            </p>
+            <p>
+                Blending such multiple nodes will create a gradient effect 
+                of having two transition on all tiles, black to white and white to black or vice versa. This will create the effect of 
+                bumped tiles around whiter area and flat or lower depth around darker area. Now all tiles should not be bumpy, 
+                otherwise it will end up irritating the final scene. So to exclude the bumpiness on some tiles, I used a noise mask to 
+                flood fill to grayscale node in order to excluding some tiles. This way the final blend produced the irregular depth 
+                for whole tile.
+            </p>
+        </div>
         <figure>
             <img src="Wood tile/first tile.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Tile creation">
             <figcaption>Fig.02: Tile creation</figcaption>
         </figure>
-        <p>
-            One of the eye caching details for wood is the pattern. Normally wood patterns are the result of exposed cellulose from 
-            cutting and refining woods. For stylize arts, these patterns look good with softer edges. I have used one of the method 
-            that I learnt from an awesome artist from 3dex on youtube. This method uses anisotropic noise and blur node wrapped to a 
-            rectangular shape. The result produces a soft looking pattern. After that I created another tile to blend with first tile set.
-        </p>
+        <div>
+            <p>
+                One of the eye caching details for wood is the pattern. Normally wood patterns are the result of exposed cellulose from 
+                cutting and refining woods. For stylize arts, these patterns look good with softer edges. I have used one of the method 
+                that I learnt from an awesome artist from 3dex on youtube. This method uses anisotropic noise and blur node wrapped to a 
+                rectangular shape. The result produces a soft looking pattern. After that I created another tile to blend with first tile set.
+            </p>
+        </div>
         <figure>
             <img src="Wood tile/wood pattern.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Wood pattern details">
             <figcaption>Fig.03: Wood pattern details</figcaption>
         </figure>
-        <p>
-            Another the eye caching details on wood planks are the decays and damages around the edges. It was easy to make from first tile 
-            generator node and edge detection. To produce irregular variation, I also used noise and wrap on another tile edge node. 
-            Finally blending them with gradient value was not easy. It was some trial and error to get a food result. I used level 
-            node a lot for this purpose. 
-        </p>
+        <div>
+            <p>
+                Another the eye caching details on wood planks are the decays and damages around the edges. It was easy to make from first tile 
+                generator node and edge detection. To produce irregular variation, I also used noise and wrap on another tile edge node. 
+                Finally blending them with gradient value was not easy. It was some trial and error to get a food result. I used level 
+                node a lot for this purpose. 
+            </p>
+        </div>
         <figure>
             <img src="Wood tile/edge decay.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Edge decay/damage">
             <figcaption>Fig.04: Edge decay/damage</figcaption>
@@ -88,13 +98,15 @@
             <img src="Wood tile/scratch.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Scratches over wooden tiles">
             <figcaption>Fig.06: Scratches over wooden tiles</figcaption>
         </figure>
-        <p>
-            I also wanted to add knife cuts on wood planks considering it might be used in a fantasy environment. These knife cuts were created 
-            from nose node, isolated with histogram node and blur node to smooth out the edges. I have also made some scratch marks of moving 
-            objects over tiles as well while making them. The added colors and surface textures were kept clean and soft. There were 
-            some trials and errors with the overall texture making. I had to isolate some areas for textures. The result of some 
-            transition from darker paints to fade out was interesting and I liked how it ended up. Surely there are rooms for improvements and I will keep polishing this texture in future.
-        </p>
+        <div>
+            <p>
+                I also wanted to add knife cuts on wood planks considering it might be used in a fantasy environment. These knife cuts were created 
+                from nose node, isolated with histogram node and blur node to smooth out the edges. I have also made some scratch marks of moving 
+                objects over tiles as well while making them. The added colors and surface textures were kept clean and soft. There were 
+                some trials and errors with the overall texture making. I had to isolate some areas for textures. The result of some 
+                transition from darker paints to fade out was interesting and I liked how it ended up. Surely there are rooms for improvements and I will keep polishing this texture in future.
+            </p>
+        </div>
         <figure>
             <img src="Wood tile/whole node network.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="The whole node network">
             <figcaption>Fig.07: The whole node network</figcaption>

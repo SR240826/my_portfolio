@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="preload" href="../../static/fonts/monofett-v23-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../static/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin>   
     <script src="../../Texture Portfolio/script.js" defer></script>
     <link href="../../Texture Portfolio/style.css" rel="stylesheet">
-    <link rel="preload" href="../../static/fonts/monofett-v23-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../../static/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
     <script src="../../static/footer.js" defer type="module"></script>
     <link rel="stylesheet" href="../../static/footer.css" type="text/css">
 
@@ -34,18 +33,20 @@
     
         
     <div class="container">
-        <p>
-            With the introduction of AI like midjourney, stable diffusion, dall-e, the creative community is alarmed. Some of it is due to 
-            the violation of IP rights and some are scared for job scarcity. But I am not here to discuss all that. Rather I am here for the
-             satisfaction of making something myself. 
-        </p>
-        <p>
-             This was one of my work from last year. I wanted to make something on the above topic. It was done with limited time. A lot of 
-             time was spent on gathering reference. Most of my 3D works are related to real life object. So it was new to me to do everything from 
-             scratch. For the limited time, I wanted to limit the scope of works as well. I was not good with sculpt that time. But still pushed 
-             myself to learn some brushes and use it.
- 
-        </p>
+        <div>
+            <p>
+                With the introduction of AI like midjourney, stable diffusion, dall-e, the creative community is alarmed. Some of it is due to 
+                the violation of IP rights and some are scared for job scarcity. But I am not here to discuss all that. Rather I am here for the
+                satisfaction of making something myself. 
+            </p>
+            <p>
+                This was one of my work from last year. I wanted to make something on the above topic. It was done with limited time. A lot of 
+                time was spent on gathering reference. Most of my 3D works are related to real life object. So it was new to me to do everything from 
+                scratch. For the limited time, I wanted to limit the scope of works as well. I was not good with sculpt that time. But still pushed 
+                myself to learn some brushes and use it.
+    
+            </p>
+        </div>
         <div class="container">
             <figure>
                 <img src="Robot side.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot side view">
@@ -54,11 +55,13 @@
             </figure>
             <figcaption id="caption01">Fig.01: My chibi robot</figcaption>
         </div>
-        <p>
-            My work pipeline for this project was creating base model in blender which includes sculpting and retopology as well. Then the model’s normal, 
-            AO, displacement was baked inside substance painter. The full texture was done inside painter as well. I love how it makes texturing easier which 
-            includes masking most of the time. 
-        </p>
+        <div>
+            <p>
+                My work pipeline for this project was creating base model in blender which includes sculpting and retopology as well. Then the model’s normal, 
+                AO, displacement was baked inside substance painter. The full texture was done inside painter as well. I love how it makes texturing easier which 
+                includes masking most of the time. 
+            </p>
+        </div>
         <div class="container">
             <figure>
                 <img src="robot wireframe toggle clay.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="My chibi robot side view">
@@ -66,26 +69,30 @@
             </figure>
             <figcaption id="caption01">Fig.02: My chibi robot</figcaption>
         </div>
-        <p>
-            In this project I used UDIM and RGB-grayscale-packed texture as well. A lot of artist or clients tends to ignore or been unfamiliar with these methods. Some even make 
-            it sound way much complicated. But it is really easy to use and with the modern graphics advancements, the advantage should be leveraged.  
-        </p>
+        <div>
+            <p>
+                In this project I used UDIM and RGB-grayscale-packed texture as well. A lot of artist or clients tends to ignore or been unfamiliar with these methods. Some even make 
+                it sound way much complicated. But it is really easy to use and with the modern graphics advancements, the advantage should be leveraged.  
+            </p>
+        </div>
         <figure>
             <img src="Robot base texture.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Diffusion packed texture (Full UDIM)">
             <figcaption>Fig.03: Diffusion packed texture (Full UDIM)</figcaption>
         </figure>
-        <p>
-            Substance painter already has presets available of packed texture for export targeting most of the rendered engine such as unity, 
-            unreal engine as well as usual for PBR textures. However, I prefer to set my own packed preset with PBR roughness while exporting. 
-            Because in some cases or the last painter version that I used, when exported with the unreal packed preset, the base texture was 
-            exported as black or transparent. I still could use that texture by separating Red, Green, Blue (RGB) and Alpha channel in render 
-            engine, but for base material, that wasn’t supposed to be the case and might confuse a client or future team members. But PBR texture 
-            pack works really great. Below you can see the Base material or diffusion texture and metallic-roughness-height map packed texture. 
-            One of metallic-roughness-height pack was from unreal engine preset and other was from PBR preset. No need to worry, if they look 
-            different as it might be due to the set up of grayscale to channel configurations. It just needs to be remembered the RGB channel 
-            configuration for metallic, roughness, height and set them up according 
-            in render engine.
-        </p>
+        <div>
+            <p>
+                Substance painter already has presets available of packed texture for export targeting most of the rendered engine such as unity, 
+                unreal engine as well as usual for PBR textures. However, I prefer to set my own packed preset with PBR roughness while exporting. 
+                Because in some cases or the last painter version that I used, when exported with the unreal packed preset, the base texture was 
+                exported as black or transparent. I still could use that texture by separating Red, Green, Blue (RGB) and Alpha channel in render 
+                engine, but for base material, that wasn’t supposed to be the case and might confuse a client or future team members. But PBR texture 
+                pack works really great. Below you can see the Base material or diffusion texture and metallic-roughness-height map packed texture. 
+                One of metallic-roughness-height pack was from unreal engine preset and other was from PBR preset. No need to worry, if they look 
+                different as it might be due to the set up of grayscale to channel configurations. It just needs to be remembered the RGB channel 
+                configuration for metallic, roughness, height and set them up according 
+                in render engine.
+            </p>
+        </div>
         <figure>
             <img src="Robot Metal Rough Height PBR.png" class="sd_img figure-img img-fluid rounded" width="50%" alt="Metallic, roughness and height map packed in PBR preset">
             <figcaption>Fig.04: Metallic, roughness and height map packed in PBR preset</figcaption>
