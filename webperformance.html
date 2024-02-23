@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preload" href="static/fonts/monofett-v23-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="static/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
-    <link rel="stylesheet" href="static/homepage.css" type="text/css">
-    <script src="static/homepage.js" defer></script>
+    <link rel="stylesheet" href="static/footer.css" type="text/css">
+    <script src="static/footer.js" defer></script>
+    <link rel="stylesheet" href="Texture Portfolio/style.css" type="text/css">
+    <script src="Texture Portfolio/script.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
     <title>Web Performance</title>
@@ -21,10 +23,62 @@
         </div>
     </nav>
     <main>
-        <div>
-            TBD
+        <header>
+            <div class="container">
+                <h1>
+                    Website optimization
+                </h1>
+            </div>
+        </header>
+        <div class="container">
+            <div>
+                <p>
+                    This web site was made with vanilla JavaScript, HTML, and CSS. Only few Bootstrap features like modal, carousel for images and few simple buttons were used. 
+                    Most of the page structure used Flexbox from CSS. For responsive page layout, JavaScript were used for the changes of interactivity. 
+                    User experience was one of the main focuses while not compromising the aesthetics. Finally, most of the pages were optimized for different 
+                    device screen sizes and connectivity. 
+                </p>
+                <p>
+                    To optimize the page, it was tested that using the least number of (one or two) 3rd party libraries resulted the best performance. Because, 
+                    when server gets a page request from user, it will not only send the page, but also the whole 3rd party libraries in the response. So it activates 
+                    a chains of responses and makes the load time way more than optimally needed. This can be solved by caching those library, but the first impression won’t 
+                    be satisfactory for the users as well as algorithm used by search engines may skip these sites.
+                </p>
+                <p>
+                    So most of the assets, including fonts and images are hosted from one main server and then cached from DNS provider. That way server will send only one or few responses
+                     to user saving tremendous loading time. Another method can be used for assets like images and fonts are lazy loading and preload. With this method the main light 
+                     resourced contents from page will be loaded first and the other contents will be loaded in behind. And the result will be substantially satisfactory. 
+                </p>
+            </div>
+            <div>
+                
+                
+            </div>
+            <figure>
+                <p>Check the results yourself!</p>
+                <form action="https://pagespeed.web.dev/analysis/https-sanjidur-com/azy21k40iv?form_factor=mobile" target="_blank" style="background-color: rgb(54, 53, 52, 0.5); border-radius: 15px;">
+                    <button class="btn btn-outline-info" style="width: 200px; height: 50px;" type="submit" value="go to pagespeed"> Pagespeed Insights</button>
+                </form>
+                <form action="https://gtmetrix.com/reports/sanjidur.com/yE6sSy7V/" target="_blank" style="background-color: rgb(54, 53, 52, 0.5); border-radius: 15px; margin-bottom: 50px;">
+                    <button class="btn btn-outline-info" style="width: 200px; height: 50px;"> GTmatrix</button>
+                </form>
+                <img src="static/web/web performance mobile.png" class="sd_img figure-img img-fluid rounded" width="640" height="401" alt="The book spine creation" loading="lazy">
+                <figcaption>Fig.01: Phone performace test on Pagespeed Insights</figcaption>
+                <img src="static/web/web performance desk.png" class="sd_img figure-img img-fluid rounded" width="640" height="401" alt="The creases beside the spine" loading="lazy">
+                <figcaption>Fig.02: Desktop performace test on Pagespeed Insights</figcaption>
+                <img src="static/web/web performance gtmatrix.png" class="sd_img figure-img img-fluid rounded" width="640" height="376" alt="The creases beside the spine" loading="lazy">
+                <figcaption>Fig.03: Performace test on Pagespeed Insights</figcaption>
+                
+            </figure>
         </div>
-    </main> 
+    </main>
+    <div id="modalimg" class="modalimg">
+        <span class="close">&times;</span>
+        <figure class="modalimg-content">
+            <img class="modalimg-content" id="modalimg_img">
+            <figcaption id="caption"></figcaption>
+        </figure>
+    </div> 
     <footer class="footer flex-container">
         <div>
             <p>
