@@ -295,18 +295,7 @@ main .shape .section::-webkit-scrollbar {
     flex-direction: row;
     gap: 20px
 }
-.fa-github{
-    font-size: 35px;
-    color: #f5f5f5
-}
-.fa-artstation {
-    font-size: 35px;
-    color: rgb(0, 195, 255);
-}
-.fa-linkedin {
-    font-size: 35px;
-    color: rgb(44, 107, 202);
-}
+
 .copy {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
@@ -320,6 +309,13 @@ main .shape .section::-webkit-scrollbar {
 .copy p {
     color: rgb(255, 255, 255);
 }
+
+.icon {
+width: 2em;
+height: 2em;
+vertical-align: -0.125em;
+}
+
 
 @media only screen and (max-width: 1081px) {
     main .flex-container {
