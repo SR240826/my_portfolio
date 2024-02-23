@@ -155,19 +155,11 @@ main .shape .project:nth-child(3) h2 {
 #operator2 {
     display: none;
 }
-.bi-palette {
-    color:rgb(245, 138, 67) !important;
-    margin-right: 10px;
-}
-.bi-file-earmark-code{
-    color:rgb(245, 73, 67) !important;
-    margin-right: 10px;
-}
-.bi-badge-3d-fill {
-    color:rgb(218, 202, 58) !important;
-    margin-right: 10px;
-}
 
+.codec, .texture, .threeD {
+    margin-right: 10px;
+    max-width: 30px;
+}
 
 .project:hover {
     cursor: pointer;
@@ -389,8 +381,9 @@ vertical-align: -0.125em;
         display: flex;
         font-weight: normal;
     }
-    .bi-palette, .bi-file-earmark-code, .bi-badge-3d-fill {
+    .codec, .texture, .threeD {
         margin-right: 5px;
+        max-width: 20px;
     }
     
 }
