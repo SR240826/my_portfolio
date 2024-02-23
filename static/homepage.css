@@ -226,6 +226,10 @@ main .shape .section::-webkit-scrollbar {
     max-height: 400px;
     border-radius: 15px;
 }
+.card > a > p {
+    color: aliceblue;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -387,5 +391,16 @@ vertical-align: -0.125em;
         margin-right: 5px;
         max-width: 20px;
     }
+    .copy{
+        /* background-color: #005383; */
+        padding-top: 25px;
+        background-image:  linear-gradient(to top, rgba(0, 45, 51, 0.76) 30%, rgba(34, 77, 80, 0) 100%);
+        width: 100vw;
+        font-size: 12px;
+    }
+    .copy a {
+    text-decoration: none;
+    color: #03d9ff;
+}
     
 }
