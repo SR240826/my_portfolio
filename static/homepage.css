@@ -15,8 +15,6 @@
     font-weight: 400;
     src: url('fonts/poppins-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-  
-  
 
 body {
     background: linear-gradient(to right, #0a192f 0%, rgb(36, 60, 94) 25%, #385179 50%, rgb(36, 60, 94) 75%, #0a192f 100%);
@@ -75,17 +73,17 @@ body {
     font-family: 'Poppins', Verdana, sans-serif;
     will-change: contents;
     position: relative;
-    left: 100%;
-    transform: scale(0);
+    left: 10%;
+
     opacity: 0;
     text-rendering: optimizeSpeed ;
 }
 
 .welcome.loaded{
     left: 0;
-    transform: scale(1);
+
     opacity: 1;
-    transition: left 0.3s ease-in-out, transform 0.5s ease-in-out, opacity 1s ease-in-out;
+    transition: left 0.3s ease-in-out,  opacity 1s ease-in-out;
       
 }
 
@@ -317,6 +315,9 @@ vertical-align: -0.125em;
 
 
 @media only screen and (max-width: 1081px) {
+    * {
+        scrollbar-width: none;
+    }
     main .flex-container {
         font-size: 32px;
         max-width: 80vw;
@@ -392,7 +393,6 @@ vertical-align: -0.125em;
         max-width: 20px;
     }
     .copy{
-        /* background-color: #005383; */
         padding-top: 25px;
         background-image:  linear-gradient(to top, rgba(0, 45, 51, 0.76) 30%, rgba(34, 77, 80, 0) 100%);
         width: 100vw;

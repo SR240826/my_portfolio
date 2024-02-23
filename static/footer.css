@@ -28,7 +28,7 @@
     white-space: normal;
     scrollbar-width: none;
     max-width: 80vw;
-    min-height: 400px;
+    min-height: 420px;
     transition: transform 0.3s ease;
     margin-bottom: 25px;
     
@@ -55,9 +55,8 @@
     text-align: center;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     transition: transform 0.3s ease;
-    /* overflow: hidden; */
     transform-origin: center;
-    overflow-wrap: break-word; /* Wrap the text within the specified dimensions */
+    overflow-wrap: break-word;
 }
 .card:hover {
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
@@ -69,6 +68,7 @@
     font-style: normal;
     color: rgb(160, 192, 192);
     font-family: 'Poppins', Verdana, sans-serif !important;
+    font-size: 14px;
 }
 .card > a > img {
     width: 80%;

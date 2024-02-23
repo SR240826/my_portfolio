@@ -56,9 +56,6 @@ h1 {
     font-size: 280% !important;
     font-weight: bolder !important;
 }
-h2 {
-    font-size: 200%;
-}
 .container {
     max-width: 60vw;
     margin: 0 auto;
@@ -73,7 +70,7 @@ h2 {
     line-height: 180%;
     word-spacing: 2px;
     letter-spacing: 1px;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'Poppins', Verdana, sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align:justify;
@@ -208,6 +205,13 @@ figure > img:hover{
     }
     .flex-container {
         max-width: 90vw;        
+    }
+    .container h1 {
+        font-size: 180% !important;
+    }
+
+    .container > div {
+        font-size: 14px;
     }
 
     .modalimg-content {
