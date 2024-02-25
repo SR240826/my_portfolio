@@ -51,7 +51,7 @@ body {
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); 
-    z-index: 2;
+    z-index: 5;
 }
 
 .navbar-brand {
@@ -250,11 +250,28 @@ main .shape .section::-webkit-scrollbar {
     cursor: pointer;
     gap: 70vw;
     font-size: 32px;
+    
+
+}
+.next, .prev{
+    opacity: 0.3;
+    transform: scale(1);
+    transform-origin: center;
+    align-self: center;
+}
+.next:hover, .prev:hover{
+    opacity: 1;
+    transform: scale(1.5);
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+    color: #03d9ff;
+    border-color: #01f7ff;
+    box-sizing: border-box;
+    border-radius: 50px;
+    border-style:double;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.prev:hover, .next:hover{
-    color: #03d9ff;
-}
 
 .section > .card {
     flex: 0 0 auto;
@@ -457,7 +474,13 @@ vertical-align: -0.125em;
     .slide{
         font-size: 24px;
         gap: 91vw;
-        left: 2%
+        left: 2%;
+    }
+
+    .next:hover, .prev:hover{
+        transform: scale(1);
+        padding: 0;
+        border-style: none;
     }
     
     .card a {
