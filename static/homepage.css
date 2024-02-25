@@ -21,6 +21,8 @@ body {
     animation: color-transition 8s ease-in-out infinite alternate;
     text-rendering:optimizeSpeed ;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes color-transition {
@@ -39,17 +41,27 @@ body {
     color: #daddba;
     
 }
-
-.flex-container .navbar-brand {
+.navbar{
+    position: fixed;
     display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 20px;
+    background-color: rgba(2, 62, 90, 0.445); 
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    z-index: 2;
+}
+
+.navbar-brand {
     font-family: "Monofett", monospace;
-    color: rgba(255, 165, 0, 1) !important;
+    color: hsl(49, 94%, 65%) !important;
     font-size: 50px;
     position: fixed;
     top: -20%;
     letter-spacing: 5px;
     margin-top: 50px;
-    z-index: 2;
     will-change: contents;
     transform: scale(0);
     text-rendering:optimizeSpeed;
@@ -60,6 +72,42 @@ body {
     transform-origin: bottom center;
     top: 0;
     transition: top 1s ease-in-out, transform 0.1s ease-in-out; 
+}
+
+
+.navbar .nav-options {
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    gap: 5vw;
+    margin-top: 55px;
+    align-items: end;
+    justify-content: center;
+    width: 80vw;
+    font-family: 'Poppins', Verdana, sans-serif;
+    color: hsl(49, 43%, 63%) !important;
+    
+}
+.nav-options a{
+    text-decoration: none;
+    color: hsl(49, 43%, 63%);
+}
+.menu{
+    display: none;
+    align-items: center;
+    color:#dbc0f3;
+    margin: 0;
+    padding: 0;
+    top: 50px;
+}
+.menu, .nav-contact, .about {
+    cursor: pointer;
+}
+.menuicon{
+    color: rgb(215, 171, 255);
+    margin: 0;
+    padding: 0;
+    width: 32px;
 }
 
 .welcome {
@@ -120,9 +168,12 @@ main .shape .project > h2 {
     align-items: center;
     justify-content: center;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-    height: 250px;
+    height: 5em;
+    min-width: 60vw;
     font-family: 'Poppins', Verdana, sans-serif;
     font-weight: bolder;
+    margin: 0;
+
 }
 
 
@@ -159,45 +210,67 @@ main .shape .project:nth-child(3) h2 {
     max-width: 30px;
 }
 
-.project:hover {
-    cursor: pointer;
-    background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(104, 238, 216, 0.342), rgba(34, 77, 80, 0));
-}
-
-.section {
-    display:flex;
+.project{
+    display: flex;
+    max-width: 80vw;
     flex-direction: column;
     align-items: center;
+}
+.section {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     overflow-x: auto;
     overflow-y: auto;
     white-space: normal;
     scrollbar-width: none;
-    max-height: 0;
-    opacity: 0;
+    max-height: 700px;
+    max-width: 80vw;
+    min-height: 450px;
+    width: 80vw;
+    /* opacity: 1; */
     transition:  max-height 0.5s ease-in-out, opacity 1s ease-in-out;      
 }
 .project:hover .section {
-    max-height: 675px;
-    opacity: 1;
+    /* max-height: 675px;
+    opacity: 1; */
+    background: linear-gradient(to right, rgba(34, 77, 80, 0), rgba(104, 238, 216, 0.342), rgba(34, 77, 80, 0));
 }
 
 main .shape .section::-webkit-scrollbar {
     display: none;
 }
+.slide{
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    z-index: 2;
+    position: absolute;
+    cursor: pointer;
+    gap: 70vw;
+    font-size: 32px;
+}
+
+.prev:hover, .next:hover{
+    color: #03d9ff;
+}
 
 .section > .card {
-    justify-content: center;
     flex: 0 0 auto;
-    margin: 20px;
+    margin: 30px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     filter: blur(8px);
     -webkit-filter: blur(8px);
-    width: 70%;
-    height: auto;
-    max-width: 60vw;
+    /* width: 30vw; */ /* for flex colum */
+    width: 50%; /* for flex row */
+    height: 350px;
+    max-width: 450px;  /* for flex row */
+    /* max-width: 40vw; */ /* for flex column */
     min-height: 350px;
     max-height: 450px;
+    
     font-family: 'Poppins', Verdana, sans-serif;
     letter-spacing: 1.5px;
     font-size: 16px;
@@ -211,11 +284,16 @@ main .shape .section::-webkit-scrollbar {
 .section > .card:hover {
     filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
     transform: scale(1.2);
-    z-index: 2;
+    
 }
 .card > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: rgb(160, 192, 192);
+    margin-top: 10%;
 }
 .card > a > img {
     width: 50%;
@@ -285,6 +363,7 @@ main .shape .section::-webkit-scrollbar {
     display: flex;
     background-color: #196b91;
     filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.5));
+    border:none;
 }
 
 .socials {
@@ -314,6 +393,7 @@ vertical-align: -0.125em;
 }
 
 
+
 @media only screen and (max-width: 1081px) {
     * {
         scrollbar-width: none;
@@ -325,8 +405,13 @@ vertical-align: -0.125em;
     main .flex-container .myworks > p{
         font-size: 24px;
     }
+    .navbar .nav-options{
+        font-size: 16px;;
+    }
+
     .flex-container .navbar-brand {
         font-size: 32px;
+        margin-top: 32px;
         top: 0;        
     }
     .navbar-brand.loaded{
@@ -349,31 +434,43 @@ vertical-align: -0.125em;
 
     main .shape {
         scroll-behavior: smooth;
-        width: 90vw;
+        width: 80vw;
         align-self: center;
     }
 
     .section .card {
         max-width: 400px;
         max-height: 400px;
+        height: 350px;
+        min-height: 50px;
         width: 60vw;
         margin: 15px;
         opacity: 1;
     }
     .section {
-        flex-direction: row;
-        width: 85vw;
-        height: 500px;
+        min-width: 85vw;
+        height: 600px;
         max-height: 675px;
+        justify-content: start;
         opacity: 1;
     }
-
+    .slide{
+        font-size: 24px;
+        gap: 91vw;
+        left: 2%
+    }
+    
+    .card a {
+        margin-top: 45px;
+    }
     .section .card a img{
-        width: 80%;
+        width: 60%;
     }
 
     .project > h2{
         font-size: 16px;
+        max-width: 90vw;
+        width: 90vw;
         max-height: 100px;
     }
     #contactform {
@@ -399,8 +496,8 @@ vertical-align: -0.125em;
         font-size: 12px;
     }
     .copy a {
-    text-decoration: none;
-    color: #03d9ff;
-}
+        text-decoration: none;
+        color: #03d9ff;
+    }
     
 }

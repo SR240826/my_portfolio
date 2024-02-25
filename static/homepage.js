@@ -25,7 +25,7 @@ contactbutton.addEventListener("click", ()=>{
         loadContactForm();
         contactform.style.maxHeight = "1100px";
         contactbutton.style.display = "none";
-        togglebutton.style.display = "block"
+        togglebutton.style.display = "block";
         
         setTimeout(function() {
             contactform.scrollIntoView({
@@ -36,7 +36,8 @@ contactbutton.addEventListener("click", ()=>{
     }
 })
 
-togglebutton.addEventListener("click", ()=>{
+
+function loadcontact() {
     if(contactform.style.maxHeight !== "1100px") {
     contactform.style.maxHeight = "1100px";
     setTimeout(function() {
@@ -49,37 +50,75 @@ togglebutton.addEventListener("click", ()=>{
     else {
         contactform.style.maxHeight = "0px";
     }
-})
+}
 
 addEventListener("load",()=>{
     intro.classList.add("loaded");
     logo.classList.add("loaded");
 })
 
-function crossScroll() {
-        var sections = document.querySelectorAll('.section');
+let sections = document.querySelectorAll('.section');
+let prevs = document.querySelectorAll('.prev');
+let nexts = document.querySelectorAll('.next');
 
-        sections.forEach(function(section) {
-            section.addEventListener('wheel', function (event) {
-                let getstyle = window.getComputedStyle(section);
-                const flexDirection = getstyle.getPropertyValue('flex-direction');
+function crossScroll(event) {
+
+        // el.forEach(function(es) {
+        //     es.addEventListener('wheel', function (event) {
+                // let getstyle = window.getComputedStyle(section);
+                // const flexDirection = getstyle.getPropertyValue('flex-direction');
                 
-                if(flexDirection !== "row") return;
-                else {
-                    event.preventDefault();
-                    var scrollAmount = event.deltaY*0.5;
-                    section.scrollTop += scrollAmount;
+                // if(flexDirection !== "row") return;
+                // else {
+                    if(innerWidth < 1081 && innerWidth > 1000) {
+                        event.preventDefault();
+                    }
+                    var scrollAmount = event.deltaY;
+                    this.scrollTop += scrollAmount;
 
                     if (scrollAmount < 0) {
                         // Scroll Up
-                        section.scrollLeft -= 15;
+                        this.scrollLeft -= 15;
                     } else {
-                        section.scrollLeft += 15;
-                    }}
-            })
-        })
-}
+                        this.scrollLeft += 15;
+                    }
+                // }
+            } //)
+//         })
 
-if (innerWidth < 1081){
-    crossScroll();
-}
+// }
+
+// function clickscroll() {
+    
+// }
+
+togglebutton.addEventListener("click", loadcontact);
+navcontact.addEventListener("click", ()=>{
+    contactbutton.style.display = "none";
+    togglebutton.style.display = "block";
+    loadContactForm();
+    loadcontact();
+});
+// crossScroll(e,sections);
+sections.forEach(function(section) {
+    section.addEventListener('wheel', crossScroll)})
+
+prevs.forEach(function(prev){
+    prev.addEventListener('click', ()=>{
+        var classIndex = Array.from(document.querySelectorAll('.prev')).indexOf(prev);
+        sections[parseInt(classIndex)].scrollBy({
+            left: -260,
+            behavior: 'smooth'
+        });
+    })
+})
+
+nexts.forEach(function(next){
+    next.addEventListener('click', ()=>{
+        var classIndex = Array.from(document.querySelectorAll('.next')).indexOf(next);     
+        sections[parseInt(classIndex)].scrollBy({
+            left: 260,
+            behavior: 'smooth'
+        });
+    })
+})

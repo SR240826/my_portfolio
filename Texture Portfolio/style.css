@@ -199,6 +199,49 @@ figure > img:hover{
     text-decoration: none;
     cursor: pointer;
 }
+.portrait{
+    border-radius: 1200px;
+    border-width: 1px;
+    border-color: #a2e7cd;
+    height: 400px;
+    width: 400px;
+    box-shadow: 0px 0px 8px rgba(59, 242, 255, 0.541);
+    pointer-events: none;
+    user-select: none;
+}
+.container .profile {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    align-items: center;
+    margin-top: 5vh
+}
+.profile-pic{
+    position: relative;
+    align-self: flex-start;
+}
+.profile-desc{
+    background-color: rgb(255, 255, 255, 0.1);
+    padding: 50px;
+    border-radius: 15px;
+}
+.profile-desc > div > h2{
+    margin-bottom: 2rem;
+}
+
+.profile-desc > div > h2::after{
+    content: '';
+    background-color: rgba(67, 195, 255, 0.39);
+    position: absolute;
+    margin-top: 1rem;
+    padding: 1px 15vw;
+    display: block;
+}
+.skills > svg{
+    width: 50px;
+}
+
 @media only screen and (max-width: 1080px) and (max-height: 2000px){
     .container{
         max-width: 80vw;
@@ -242,7 +285,10 @@ figure > img:hover{
     .carousel-caption p {
         font-size: 12px;
     }
-
+    .container .profile {
+        width: 80vw;
+        flex-direction: column;
+    }
 }
 @media only screen and (max-height: 1000px) {
     .flex-container {
@@ -250,5 +296,21 @@ figure > img:hover{
     }
     .flex-container .navbar-brand {
         font-size: 32px;        
+    }
+    .container .profile {
+        width: 80vw;
+        flex-direction: column;
+    }
+    .container .profile .profile-desc{
+        width: 90vw;
+    }
+    .portrait{
+        align-self: center;
+        justify-content: center;
+        height: 60vw;
+        width: 60vw;
+    }
+    .profile-desc > div > h2::after{
+        padding: 1px 30vw;
     }
 }
