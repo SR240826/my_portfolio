@@ -122,3 +122,29 @@ nexts.forEach(function(next){
         });
     })
 })
+
+let submenu = document.querySelectorAll(".submenu");
+
+gamemenu.addEventListener("click", () => {
+    submenu[0].classList.toggle("visible");
+});
+
+texturemenu.addEventListener("click", () => {
+    submenu[1].classList.toggle("visible");
+});
+
+artmenu.addEventListener("click", () => {
+    submenu[2].classList.toggle("visible");
+});
+let side = ["left", "right", "center"]
+let side2 = ["bottom", "top", "center"]
+menubtn.addEventListener("click", ()=>{
+    menulist.style.transform = "scale(0)";
+    menulist.style.transformOrigin = side[Math.round(Math.random() * 2)] + " " + side2[Math.round(Math.random() * 2)]  ;
+})
+
+menu.addEventListener("click", ()=>{
+    menulist.style.transform = "scale(1)"; 
+})
+
+

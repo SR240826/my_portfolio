@@ -93,7 +93,7 @@ body {
     color: hsl(49, 43%, 63%);
 }
 .menu{
-    display: none;
+    display: flex;
     align-items: center;
     color:#dbc0f3;
     margin: 0;
@@ -109,7 +109,100 @@ body {
     padding: 0;
     width: 32px;
 }
+.secondery-nav{
+    height: 100%;
+    width: 100%;
+    position: fixed; 
+    z-index: 5; 
+    left: 0;
+    top: 0;
+    background-color: #022b2c23;
+    backdrop-filter: blur(15px);
+    overflow-x: hidden;
+    transition: 0.5s ease-in-out; 
+    transform: scale(0);
+}
+.menulist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    top: 25%;
+    width: 100%;
+    margin-top: 30px;
+    font-family: 'Poppins', Verdana, sans-serif;
+    user-select: none;
+}
+.menulist a{
+    text-decoration: none;
+    color: #daddba;
+    font-size: 32px;
+}
+.submenu{
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    background-color: #d8e74b23;
+    backdrop-filter: blur(15px);
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 15px;
+    padding: 0;
+    height: 0;
+    transform: scale(0);
+    transition: padding 0.5s, height 0.3s, transform 0.5s;
+}
+.submenu > a {
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    margin: 2px;
 
+}
+
+.submenu.visible {
+    padding: 25px;
+    height: 100%;
+    transform: scale(1);
+}
+.submenu > a{
+    font-size: 24px;
+    color: #f0f0f0;
+}
+.submenu > a:hover{
+    color: rgb(164, 243, 233);
+}
+.menulist a::after{
+    content: "";
+    background-color: rgba(46, 213, 255, 0.39);
+    position: relative;
+    display: block;
+    transition: width 0.3s ease; /* Adding a transition effect for width */
+    width: 0; /* Initially set width to 0 */
+    height: 2px; /* Full height */
+    left: 50%; /* Start from the center */
+    transform: translateX(-50%);/* Adding a transition effect */
+}
+.menulist > a:hover{
+    color: #fcff4f;
+    cursor: pointer;
+}
+.menulist a:hover::after{
+    width: 100%; /* Expand the width on hover */
+}
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    text-decoration: none;
+    color: #daddba;
+    font-weight: bolder;
+}
+.close-btn:hover{
+    transform: scale(1.1);
+}
+  
 .welcome {
     align-self: center;
     padding-top: 250px;
