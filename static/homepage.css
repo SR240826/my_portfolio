@@ -532,6 +532,12 @@ vertical-align: -0.125em;
         transform-origin: bottom center;
         transition: transform 0.3s ease-in-out; 
     }
+    .menulist a{
+        font-size: 24px;
+    }
+    .submenu a{
+        font-size: 16px;
+    }
     .flex-container .welcome {
         max-width: 80vw;
         font-size: 24px;
