@@ -20,14 +20,24 @@ function initposition() {
         targetposition = grid[Math.floor(Math.random() * grid.length)];
     } while (playerposition === targetposition);
 }
+if (innerWidth < 500) {
+    canvas.width = 200;
+    canvas.height = 200;
+    cellSize = 20;
+    // miro.width = 300;
+    // miro.height = 768;
+}
 
 function setup() {
     if (innerWidth < 500) {
         canvas.width = 200;
         canvas.height = 200;
         cellSize = 20;
-        // miro.width = 300;
-        // miro.height = 768;
+    }
+    else {
+        canvas.width = 400;
+        canvas.height = 400;
+        cellSize = 40;
     }
     for (let y = 0; y < canvas.height / cellSize; y++) {
         for (let x = 0; x < canvas.width / cellSize; x++) {
@@ -276,15 +286,32 @@ function gameover () {
         // c.fillRect(targetposition.x * cellSize, targetposition.y * cellSize, cellSize, cellSize);
         drawMaze("white", "white", "white", "white");
         solved.style.display = "block";
+        playbutton.innerHTML = "Restart"
+        playbutton.style.display = "block"
     }
 }
-let ftwidth = innerWidth;
-addEventListener("resize",()=>{
-    if(ftwidth !== innerWidth){
-        location.reload();
-    }
-    else return;
-})
+// let ftwidth = innerWidth;
+// addEventListener("resize",()=>{
+//     if(ftwidth !== innerWidth){
+//         location.reload();
+//     }
+//     else return;
+// })
 window.addEventListener('keydown', moveplayer);
-setup();
+var clicked = 0;
+playbutton.addEventListener("click", ()=>{
+    playbutton.style.display = "none"
+    clicked++;
+    if (clicked > 1 || playbutton.innerHTML === "Restart"){
+        c.clearRect(0, 0, canvas.width, canvas.height);
+        solved.style.display = "none";
+        clicked = 0;
+        grid = [];
+        stack = [];
+        setup();
+    }
+    else setup();
+})
+
+drawMaze("white", "white", "white", "white");
 
