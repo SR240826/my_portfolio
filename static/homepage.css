@@ -74,7 +74,7 @@ a{
     transform: scale(1);
     transform-origin: bottom center;
     top: 0;
-    transition: top 1s ease-in-out, transform 0.1s ease-in-out; 
+    transition: top 1s cubic-bezier(0, 0.14, 0, 0.34), transform 0.4s cubic-bezier(0.05, 0.05, 0.8, 1.1); 
 }
 
 
@@ -226,7 +226,7 @@ a{
     left: 0;
 
     opacity: 1;
-    transition: left 0.3s ease-in-out,  opacity 1s ease-in-out;
+    transition: left 0.3s linear(-0.42 -29.41%,-0.17 11.05%, 0.45 13.26%, 1.24 96.32%),  opacity 1s ease-in-out;
       
 }
 
@@ -323,7 +323,7 @@ main .shape .project:nth-child(3) h2 {
     max-height: 700px;
     max-width: 80vw;
     min-height: 450px;
-    width: 80vw;
+    width: 60vw;
     /* opacity: 1; */
     transition:  max-height 0.5s ease-in-out, opacity 1s ease-in-out;      
 }
@@ -351,10 +351,10 @@ main .shape .section::-webkit-scrollbar {
     background-color: rgba(255, 222, 173, 0);
 }
 .prev{
-    left: 20vw;
+    left: 18vw;
 }
 .next{
-    right: 20vw;
+    right: 18vw;
 }
 .next:hover, .prev:hover{
     transform: scale(1.2);
@@ -530,7 +530,7 @@ vertical-align: -0.125em;
     .navbar-brand.loaded{
         transform: scale(1);
         transform-origin: bottom center;
-        transition: transform 0.3s ease-in-out; 
+        transition: transform 0.5s cubic-bezier(0.75, 0.02, 0, 0.52); 
     }
     .menulist a{
         font-size: 24px;
@@ -548,7 +548,7 @@ vertical-align: -0.125em;
     .welcome.welcome.loaded{
         transform: scale(1);
         transform-origin: top right;
-        transition: transform 0.5s ease-in-out;
+        transition: transform 0.5s cubic-bezier(0, 0, 0, 0.93);
     }
 
     main .shape {
