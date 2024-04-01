@@ -243,7 +243,7 @@ main .flex-container{
     flex-direction: column;
     max-width: 60vw;
 }
-.myworks {
+.myworks, .achievements {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -418,6 +418,40 @@ main .shape .section::-webkit-scrollbar {
 .card > a > p {
     color: aliceblue;
 }
+.achievements {
+    background: rgb(255, 76, 85);
+}
+.achievement {
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);    
+    font-family: 'Poppins', Verdana, sans-serif;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    /* text-align: center; */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+    transition: transform 0.5s ease;
+    transform-origin: center;
+    overflow-wrap: break-word;
+}
+.achievement > div {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+.achievement > div > p {
+    margin-left: 25px;
+    color: aliceblue;
+}
+.achievement > div > p > a {
+    text-decoration: none;
+    color: rgb(255, 188, 88);
+}
+.achievement > div > img {
+    border-radius: 15px;
+}
 
 .footer {
     display: flex;
@@ -515,7 +549,7 @@ vertical-align: -0.125em;
         font-size: 32px;
         max-width: 80vw;
     }
-    main .flex-container .myworks > p{
+    main .flex-container .myworks > p, .achievements > p{
         font-size: 24px;
     }
     .navbar .nav-options{
@@ -624,6 +658,9 @@ vertical-align: -0.125em;
     .copy a {
         text-decoration: none;
         color: #03d9ff;
+    }
+    .achievement > div {
+        flex-direction: column;
     }
     
 }
