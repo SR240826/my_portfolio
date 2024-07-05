@@ -323,7 +323,7 @@ main .shape .project:nth-child(3) h2 {
     max-height: 700px;
     max-width: 80vw;
     min-height: 450px;
-    width: 60vw;
+    width: 80vw;
     /* opacity: 1; */
     transition:  max-height 0.5s ease-in-out, opacity 1s ease-in-out;      
 }
@@ -351,10 +351,10 @@ main .shape .section::-webkit-scrollbar {
     background-color: rgba(255, 222, 173, 0);
 }
 .prev{
-    left: 18vw;
+    left: 10vw;
 }
 .next{
-    right: 18vw;
+    right: 10vw;
 }
 .next:hover, .prev:hover{
     transform: scale(1.2);
