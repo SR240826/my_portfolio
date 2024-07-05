@@ -310,12 +310,14 @@ main .shape .project:nth-child(3) h2 {
     max-width: 80vw;
     flex-direction: column;
     align-items: center;
+    /* justify-content: center;
+    align-items: center; */
 }
 .section {
     display:flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     overflow-x: auto;
     overflow-y: auto;
     white-space: normal;
@@ -323,7 +325,7 @@ main .shape .project:nth-child(3) h2 {
     max-height: 700px;
     max-width: 80vw;
     min-height: 450px;
-    width: 80vw;
+    width: 60vw;
     /* opacity: 1; */
     transition:  max-height 0.5s ease-in-out, opacity 1s ease-in-out;      
 }
@@ -351,10 +353,10 @@ main .shape .section::-webkit-scrollbar {
     background-color: rgba(255, 222, 173, 0);
 }
 .prev{
-    left: 10vw;
+    left: 18vw;
 }
 .next{
-    right: 10vw;
+    right: 18vw;
 }
 .next:hover, .prev:hover{
     transform: scale(1.2);
