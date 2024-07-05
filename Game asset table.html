@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam deck's 3D model by Sanjidur</title>
+    <link rel="preload" href="static/fonts/monofett-v23-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
+    <script src="static/script.js" defer></script>
+    <link href="static/style.css" rel="stylesheet">
+    <script src="static/footer.js" defer type="module"></script>
+    <link rel="stylesheet" href="static/footer.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid flex-container">
+            <a class="navbar-brand" href="/" id="logo">
+                Home
+            </a>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <h1>
+                Game Asset: Furniture
+            </h1>        
+        </div>
+    </header>   
+    <div class="container">
+        <div>
+            <p>
+                This table was created with a goal to implement inside game engine. Thus, it required the game art workflow which included
+                <p style="margin-left: 50px;">
+                    <br>
+                    1.	Creating both high poly model and low poly model.
+                    <br><br>
+                    2.	UV unwrap and check texel density. As it’s a game model, the UV unwrap was unique than usual 3D model and the texel density was emphasized more on camera viewer side. That is why the bottom, top and back side of this table has lower texel density to make rooms for other parts to produce clearer texture for them i.e. drawer pulls or curvature of legs. 
+                    <br><br>
+                    3.	Bake the texture from high poly to low poly model. Baking can provide curvature to sharp edges of low poly as well as transfer high poly imperfections to low poly through height map and normal.
+                    <br><br>
+                    4.	Hand paint details like dust and other imperfections.
+                </p>
+            </p>
+        </div>
+        <div class="container">
+            <figure>
+                <img src="static/3D models/Game asset table/Front View.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Steam deck clay view" loading="lazy" decoding="async">
+                <img src="static/3D models/Game asset table/Zoomed in side.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Steam deck wireframe view" loading="lazy" decoding="async">
+                <img src="static/3D models/Game asset table/Zoomed in front.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Steam deck clay view" loading="lazy" decoding="async">  
+            </figure>
+            <figcaption id="caption01">Fig.01: Rendered view: Game Asset - Furniture</figcaption>
+        </div>
+        <br><br>
+        <div class="container">
+            <figure>
+                <img src="static/3D models/Game asset table/wire.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Table Wireframe" loading="lazy" decoding="async">
+                <img src="static/3D models/Game asset table/Table Texture map.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Table Texture map" loading="lazy" decoding="async"> 
+            </figure>
+            <figcaption id="caption01">Fig.02: Wireframe and Texture map</figcaption>
+        </div>
+    </div>
+    <div id="modalimg" class="modalimg">
+        <span class="close">&times;</span>
+        <figure class="modalimg-content">
+            <img class="modalimg-content" id="modalimg_img">
+            <figcaption id="caption"></figcaption>
+        </figure>
+    </div>
+    <footer class="footer flex-container">
+        <div>
+            <p>
+                Check out my other projects!
+            </p>
+        </div>
+        <div class="section footer">
+            <div class="card">
+                <a href="canvas_project.html">
+                    <img src="static/Card Iamge/JS_Game.webp" loading="lazy" alt="JavaScript Game: Quest Model" decoding="async">
+                    <p> A simple generic quest model in JavaScript</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Maze.html">
+                    <img src="static/Card Iamge/maze.png" loading="lazy" alt="JavaScript Game: Maze Generator" decoding="async">
+                    <p> Maze generator</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="sd_wood.html">
+                    <img src="static/Texture Portfolio/Wood tile/Wood render 2.webp" loading="lazy" alt="Substance designer: Wood Pattern" decoding="async">
+                    <p> Stylized wood texture, fully procedural, with substance designer</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="sd_trim_sheet.html">
+                    <img src="static/Texture Portfolio/Trim Sheet/Trim sheet SD 2.webp" loading="lazy" alt="Substance designer: Trim Sheet" decoding="async">
+                    <p> Stylized trim sheet texture with substance designer</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="sd_wip.html">
+                    <img src="static/Texture Portfolio/Sci fi/Sci fi.webp" loading="lazy" alt="Substance designer: Experimental Textures" decoding="async">
+                    <p> Other experimental projects with substance designer</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Robot.html">
+                    <img src="static/3D models/Robot/Robot 2.webp" loading="lazy" alt="3D Model: Artronic Robot" decoding="async">
+                    <p> Artronic</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Miscellaneous.html">
+                    <img src="static/3D models/miscellaneous/misc cover.webp" loading="lazy" alt="3D Model: Others" decoding="async">
+                    <p> Other experiments and exercise</p>
+                </a>
+            </div>
+        </div>
+        <div class="copy">
+            <p><a href="https://sanjidur.com">sanjidur.com</a> <span>&copy;</span> 2024. All rights reserved. This site was developed by Sanjidur</p>
+        </div>
+    </footer>
+</body>
+</html>
