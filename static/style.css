@@ -278,7 +278,7 @@ figure > img:hover{
         justify-content: center;
     }
     .container > figure:nth-child(1) > img {
-        width: 30vw;
+        width: 60vw;
     }
     .container > .carousel {
         width: 60vw;
