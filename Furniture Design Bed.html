@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Design: Bed by Sanjidur</title>
+    <link rel="preload" href="static/fonts/monofett-v23-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="static/fonts/poppins-v20-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
+    <script src="static/script.js" defer></script>
+    <link href="static/style.css" rel="stylesheet">
+    <script src="static/footer.js" defer type="module"></script>
+    <link rel="stylesheet" href="static/footer.css" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid flex-container">
+            <a class="navbar-brand" href="/" id="logo">
+                Home
+            </a>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <h1>
+                Photorealistic Furniture: Asian Bed
+            </h1>        
+        </div>
+    </header>   
+    <div class="container">
+        <div>
+            <p>
+                The goal of this bed model was to create a curved structure that can be tested with an optimized UV unwrap that can support all tiled textures without breaking the texture flow such as woods cellulose pattern.
+                For the bed sheet and blanket, cloth simulation was used. After that along with pillow, a cloth brush was used to add creases. It was a fun experiment to add realistic creases on bed sheet.
+            </p>
+        </div>
+        <div class="container">
+            <figure>
+                <img src="static/3D models/Furniture Bed/Foot to side dof.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Bed corner view from foot side" loading="lazy" decoding="async">
+                <img src="static/3D models/Furniture Bed/Corner dof.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Bed full view from corner" loading="lazy" decoding="async">
+                <img src="static/3D models/Furniture Bed/Side dof.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Bed side view parallel 90 degree " loading="lazy" decoding="async">
+            </figure>
+        </div>
+        <div class="container">
+            <figure>
+                <img src="static/3D models/Furniture Bed/Head back focal.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Bed back view closed zoomed" loading="lazy" decoding="async">
+                <img src="static/3D models/Furniture Bed/Full burst.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Bed full view" loading="lazy" decoding="async">
+                <img src="static/3D models/Furniture Bed/Full with drawer.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Bed full view with drawer" loading="lazy" decoding="async">  
+            </figure>
+            <figcaption id="caption01">Fig.01: Rendered view: Bed's Photorealistic Render</figcaption>
+        </div>
+        <div>
+            <p>
+                And of course the client wanted to see the full functionality and set up of this bed. So had to do all fucntional design including tiny bits of joining screws. Loved working on this model in details.
+            </p>
+        </div>
+        <div class="container">
+            <figure>
+                <img src="static/3D models/Furniture Bed/Wireframe.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Wireframe of model" loading="lazy" decoding="async">
+                <img src="static/3D models/Furniture Bed/Clay.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Base mesh of full model" loading="lazy" decoding="async">
+                <img src="static/3D models/Furniture Bed/inner clay.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Base mesh of full structure" loading="lazy" decoding="async">   
+            </figure>
+            <figcaption id="caption01">Fig.02: Wireframe view</figcaption>
+        </div>
+        <div>
+            <p>
+                As the focus was to make it compatible with any tiled texture, I did not focus on baking any texture for this model. But I have tested multiple textures with resulted little to no changes 
+                fundamentally except when texture is too low resolution. To presurve details, cloths UV were kept separeted from wood frames and wood frames were divied in two layers- inner and outer frame 
+                layouts. The texel density is kept arount 526.86 pixel per unit. You can check the UV lay outs bellow!
+            </p>
+        </div>
+        <div class="container">
+            <figure>
+                <img src="static/3D models/Furniture Bed/UV layout.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Outer frame UV" loading="lazy" decoding="async">
+                <img src="static/3D models/Furniture Bed/Cloth uv.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="Sheet and pillow UV" loading="lazy" decoding="async">
+                <img src="static/3D models/Furniture Bed/inner frame structure uv.png" class="sd_img figure-img img-fluid rounded" width="20%" alt="inner Frame Structure UV" loading="lazy" decoding="async">   
+            </figure>
+            <figcaption id="caption01">Fig.03: UV layouts of whole model</figcaption>
+        </div>
+    </div>
+    <div id="modalimg" class="modalimg">
+        <span class="close">&times;</span>
+        <figure class="modalimg-content">
+            <img class="modalimg-content" id="modalimg_img">
+            <figcaption id="caption"></figcaption>
+        </figure>
+    </div>
+    <footer class="footer flex-container">
+        <div>
+            <p>
+                Check out my other projects!
+            </p>
+        </div>
+        <div class="section footer">
+            <div class="card">
+                <a href="canvas_project.html">
+                    <img src="static/Card Iamge/JS_Game.webp" loading="lazy" alt="JavaScript Game: Quest Model" decoding="async">
+                    <p> A simple generic quest model in JavaScript</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Maze.html">
+                    <img src="static/Card Iamge/maze.png" loading="lazy" alt="JavaScript Game: Maze Generator" decoding="async">
+                    <p> Maze generator</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="sd_wood.html">
+                    <img src="static/Texture Portfolio/Wood tile/Wood render 2.webp" loading="lazy" alt="Substance designer: Wood Pattern" decoding="async">
+                    <p> Stylized wood texture, fully procedural, with substance designer</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="sd_trim_sheet.html">
+                    <img src="static/Texture Portfolio/Trim Sheet/Trim sheet SD 2.webp" loading="lazy" alt="Substance designer: Trim Sheet" decoding="async">
+                    <p> Stylized trim sheet texture with substance designer</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="sd_wip.html">
+                    <img src="static/Texture Portfolio/Sci fi/Sci fi.webp" loading="lazy" alt="Substance designer: Experimental Textures" decoding="async">
+                    <p> Other experimental projects with substance designer</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Robot.html">
+                    <img src="static/3D models/Robot/Robot 2.webp" loading="lazy" alt="3D Model: Artronic Robot" decoding="async">
+                    <p> Artronic</p>
+                </a>
+            </div>
+            <div class="card">
+                <a href="Miscellaneous.html">
+                    <img src="static/3D models/miscellaneous/misc cover.webp" loading="lazy" alt="3D Model: Others" decoding="async">
+                    <p> Other experiments and exercise</p>
+                </a>
+            </div>
+        </div>
+        <div class="copy">
+            <p><a href="https://sanjidur.com">sanjidur.com</a> <span>&copy;</span> 2024. All rights reserved. This site was developed by Sanjidur</p>
+        </div>
+    </footer>
+</body>
+</html>
